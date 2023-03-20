@@ -12,6 +12,15 @@ module.exports = {
 
 
     },
+
+    animation: {   fade: "fadeOut 1s ease-in-out",},
+    keyframes: (opacity) => ({
+      fadeOut: {
+        "0%": { opacity: 0 },
+        // '100%': {color: theme('') },
+      },
+    }),
+    
   },
   plugins: [],
 }

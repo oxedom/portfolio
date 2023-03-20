@@ -16,10 +16,31 @@ export default function Home() {
       </Head>
       <div>
       <Navbar></Navbar>
-      <main  className="bg-fadebluepurple w-full h-screen  flex items-center ">
+      <main  className="bg-fadebluepurple w-full h-screen  flex items-center sm:justify-center ">
 
-<Image width={220} height={50} src={waving}></Image>
+        <section className='mt-10 mx-5 flex flex-col  items-center gap-5 md:justify-center md:flex-row'>
+          <div>
+          <h2 className='text-4xl sm:text-5xl font-bold'> Hi I'm Sam</h2>
+        <h3 className='text-2xl sm:text-3xl font-medium'> Software Developer</h3>
+        <h7 className='text-xl  sm:text-2xl'> A creative developer with a strong passion for technology </h7>
+          </div>
+          <Image width={250} height={50} src={waving}></Image>
+
+
+        </section>
+
+  
+
+
+
+
 </main>
+
+
+<section> 
+  <h2 className='text-4xl mt-5 mx-5 font-medium'> Projects</h2>
+
+</section>
       </div>
    
  
