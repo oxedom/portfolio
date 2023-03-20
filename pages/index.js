@@ -7,6 +7,9 @@ import { useEffect, useRef, useState } from 'react'
 import githubIcon from '../public/images/github-mark.png'
 import email from '../public/images/email.png'
 import ProjectBox from '@/components/ProjectBox'
+import Frontend from '@/components/Frontend'
+import Backend from '@/components/Backend'
+import OtherStack from '@/components/OtherStack'
 
 export default function Home() {
 
@@ -31,7 +34,6 @@ export default function Home() {
     window.addEventListener('scroll', handleScroll)
   }, [])
 
-  const box = " rounded-lg bg-gray-100"
   
   return (
     <>
@@ -82,12 +84,14 @@ export default function Home() {
 </section>
 
 <section ref={skillsRef}> 
-  <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-medium text-center'> Skills</h2>
+  <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-medium text-center items-center '> Skills</h2>
 
-  <div className=' grid grid-rows-3 mx-28 mt-10  sm:grid-rows-0 sm:grid-cols-3 gap-5'>
-  <div className={box}></div>
-  <div className={box}></div>
-  <div className={box}></div>
+  <div className='flex flex-col sm:flex-row items-center justify-center gap-10 my-10'>
+
+
+      <Frontend></Frontend>
+      <Backend></Backend>
+      <OtherStack></OtherStack>
   </div>
 
   
