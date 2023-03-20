@@ -3,9 +3,17 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import waving from '../public/images/waving.png'
 import Navbar from '../components/Navbar'
+import { useRef } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
+
 export default function Home() {
+
+  const projectsRef = useRef(null)
+  const skillsRef = useRef(null)
+  const contactRef  = useRef(null)
+
+  
   return (
     <>
       <Head>
@@ -15,7 +23,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-      <Navbar></Navbar>
+      <Navbar
+      contactRef={contactRef}
+      skillsRef={skillsRef}
+      projectsRef={projectsRef}
+      ></Navbar>
       <main  className="bg-fadebluepurple w-full h-screen  flex items-center sm:justify-center ">
 
         <section className='mt-10 mx-5 flex flex-col  items-center gap-5 md:justify-center md:flex-row'>
@@ -37,7 +49,7 @@ export default function Home() {
 </main>
 
 
-<section> 
+<section ref={projectsRef}> 
   <h2 className='text-4xl mt-5 mx-5 font-medium'> Projects</h2>
 
 </section>
