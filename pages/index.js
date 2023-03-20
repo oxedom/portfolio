@@ -57,13 +57,13 @@ export default function Home() {
       skillsRef={skillsRef}
       projectsRef={projectsRef}
       ></Navbar>
-      <main   className="bg-fadebluepurple w-full   w-min-[320px] h-screen  flex items-center sm:justify-center ">
+      <main   className="bg-sunsetMobile sm:bg-sunset w-full bg-fixed bg-no-repeat bg-cover w-min-[320px] h-screen  flex items-center sm:justify-center ">
 
         <section className='mt-5   flex flex-col mx-5  items-center gap-5 md:justify-center md:flex-row'>
-          <div>
+          <div className='text-black'>
           <h2 className='text-2xl sm:text-7xl font-bold text-center'> Hi I'm Sam</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '> A creative developer with a strong passion for technology </p>
+        <p className='text-xl  sm:text-3xl text-center  '> A creative programmer with a devoted passion for technology</p>
           </div>
           <Image alt='waving memoji' width={200}  src={waving}></Image>
 
@@ -101,7 +101,7 @@ export default function Home() {
 
 
 <section ref={contactRef}> 
-
+    <h1 className='text-5xl text-center font-bold'>  Contact </h1>
 </section>
 
 <footer className='flex flex-col justify-center gap-5 items-center py-5  bg-black'>
@@ -120,7 +120,7 @@ export default function Home() {
 
 
 
-    <p  className='text-white'>  sambenjaminbrink@gmail.com
+    <p  className='text-white font-medium'>  sambenjaminbrink@gmail.com
     </p>
 
 

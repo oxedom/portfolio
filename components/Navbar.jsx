@@ -33,7 +33,7 @@ const Navbar = ({projectsRef, contactRef, skillsRef, scrolled}) => {
     return ( 
     
         
-        <nav className={` z-3  mb-5 fixed  max-w-full w-full  h-[80px]  sm:h-25 2xl:h-25 ${scrolled ? "bg-white shadow-sm" : ""}
+        <nav className={` z-3  mb-5 fixed  max-w-full w-full  h-[100px]  sm:h-25 2xl:h-25 ${scrolled ? "bg-white shadow-sm" : ""}
           transition duration-300  gap-2 sm:gap-5 animate-fade p-1`}>
         
         <div className="flex flex-col items-center justify-center">
