@@ -59,7 +59,7 @@ export default function Home() {
       ></Navbar>
       <main   className="bg-sunsetMobile sm:bg-sunset w-full bg-fixed bg-no-repeat bg-cover w-min-[320px] h-screen  flex items-center sm:justify-center ">
 
-        <section className='mt-5   flex flex-col mx-5  items-center gap-5 md:justify-center md:flex-row'>
+        <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
           <div className='text-black'>
           <h2 className='text-2xl sm:text-7xl font-bold text-center'> Hi I'm Sam</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
