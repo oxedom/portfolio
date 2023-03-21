@@ -47,8 +47,9 @@ export default function Home() {
   const contactRef  = useRef(null)
   const [imageHover, setImageHover] = useState(false)
   const [scrolled, setScrolled ] = useState(false)
-  const skillTitle = "text-center font-bold text-3xl text-gray-800 m-3"
-  const skillBoxStyle = "bg-gray-100 gap-10 md:gap-5  grid-cols-3 grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-8  rounded-lg"
+  const [showAvatar, setShowAvatar] = useState(true)
+  const skillTitle = "text-center font-bold text-3xl text-slate-800 m-3"
+  const skillBoxStyle = "bg-gray-100 gap-8 md:gap-10 text-gray-600 grid-cols-3 shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-16  rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -58,6 +59,14 @@ export default function Home() {
     else 
     {
       setScrolled(false)
+    }
+    if(window.scrollY > 650) 
+    {
+      setShowAvatar(false)
+    }
+    else 
+    {
+      setShowAvatar(true)
     }
   }
 
@@ -95,15 +104,15 @@ export default function Home() {
           <div className='text-black   '>
           <h2 className='text-2xl sm:text-7xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '> A creative programmer with a devoted passion for technology</p>
+        <p className='text-xl  sm:text-3xl text-center  '>Creative programmer with a devoted passion for technology and learning</p>
           </div>
 
           <div onMouseOver={(e) => { setImageHover(true)}} onMouseOut={(e) => { setImageHover(false)}} className='animate-mover flex flex-col p-5 gap-5 transition items-center  tr '>
-          {imageHover ? <a target={"_blank"} className='fixed animate-fade  duration-200  opacity-5 bg-white font-bold p-2 text-black rounded-xl bottom-20 text-bold ' href='https://sambenjaminbrink.myportfolio.com/'> 
+          {imageHover ? <a target={"_blank"} className='fixed animate-fade  duration-100  opacity-10 bg-white font-bold p-2 text-black rounded-xl bottom-20 text-bold ' href='https://sambenjaminbrink.myportfolio.com/'> 
             Click for Photography site!
             </a> : null }
-            <Image alt='avatar of self' onClick={(e) => {if(imageHover) { window.open('https://sambenjaminbrink.myportfolio.com/')}}}  width={200}   src={avatarArms}></Image>
-   
+            {showAvatar ? <Image alt='avatar of self' className='animate-fade  duration-100' onClick={(e) => {if(imageHover) { window.open('https://sambenjaminbrink.myportfolio.com/')}}}  width={200}   src={avatarArms}></Image>
+              : null }
 
           </div>
 
@@ -119,13 +128,10 @@ export default function Home() {
 </main>
 
 
-<section ref={projectsRef}> 
-  <h2 className='text-3xl sm:text-6xl  font-medium text-center'> Projects</h2>
-  <ProjectBox></ProjectBox>
-</section>
 
-<section ref={skillsRef}> 
-  <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-bold text-center items-center '> Skills and tools</h2>
+
+<section className='my-32' > 
+  <h2 className='text-5xl sm:text-7xl  mx-32 mb-32 font-bold text-slate-900  items-center '> Skills and tools</h2>
 
   <div className="flex flex-col gap-5 lg:flex-row justify-around items-center  mx-10 my-10">
 
@@ -190,17 +196,22 @@ export default function Home() {
  
 </section>
 
+<section className='mx-32'  ref={projectsRef}> 
+  <h2 className='text-5xl sm:text-7xl text-slate-900   my-5 font-bold mx-16'> Projects</h2>
 
+  <ProjectBox></ProjectBox>
 
-<section className='my-20 flex flex-col gap-5 items-center ' ref={contactRef}> 
-    <h3 className='text-7xl text-center  font-bold'>  Contact <span className='text-lime-600  animate-fade'> me </span> </h3>
+</section>
+
+<section className='my-20 flex flex-col gap-5 items-center ' ref={skillsRef}> 
+    <h3 className='text-7xl text-center  font-bold text-slate-900 '>  Contact <span className='text-lime-600  animate-fade'> me </span> </h3>
     
     <span className='text-2xl ' > sambenjaminbrink@gmail.com</span>
 
   
 </section>
 
-<footer className='flex flex-col justify-center gap-5 items-center py-5  bg-black'>
+<footer ref={contactRef} className='flex flex-col justify-center gap-5 items-center py-5  bg-black'>
   
   <div className='flex justify-center items-center '>
 
