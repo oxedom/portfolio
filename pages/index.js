@@ -1,15 +1,44 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import waving from '../public/images/waving.png'
+
+import avatarArms from '../public/images/avatarArms.png'
 import Navbar from '../components/Navbar'
 import { useEffect, useRef, useState } from 'react'
 import githubIcon from '../public/images/github-mark.png'
-import email from '../public/images/email.png'
 import ProjectBox from '@/components/ProjectBox'
-import Frontend from '@/components/Frontend'
-import Backend from '@/components/Backend'
-import OtherStack from '@/components/OtherStack'
+import Icon from '@/components/Icon'
+
+
+//Skills
+import react from '../public/skills/front/react.png'
+import css from '../public/skills/front/css.png'
+import nextjs from '../public/skills/front/nextjs.png'
+import tailwind from '../public/skills/front/Tailwind.png'
+import jslogo from '../public/skills/front/jslogo.png'
+import htmllogo from '../public/skills/front/html.png'
+import recoil from '../public/skills/front/Recoil.png'
+
+
+//Back Skills
+import express from '../public/skills/back/expres.png'
+import firebase from '../public/skills/back/firebase.png'
+import graphql from '../public/skills/back/graphql.png'
+import mongodb from '../public/skills/back/mongodb.png'
+import postgres from '../public/skills/back/postgres.png'
+import node from '../public/skills/back/node.png'
+import flask from '../public/skills/back/flask.png'
+import nginx from '../public/skills/back/nginx.png'
+//General SKills
+import docker from '../public/skills/other/docker.png'
+import cli from '../public/skills/other/cli.png'
+import git from '../public/skills/other/git.png'
+import github from '../public/skills/other/github.png'
+import java from '../public/skills/other/Java.png'
+import jest from '../public/skills/other/jest.png'
+import linux from '../public/skills/other/linux_tux.png'
+import opencv from '../public/skills/other/opencv.png'
+import tensorflow from '../public/skills/other/tensorflow.png'
+import webpack from '../public/skills/other/webpack.png'
 
 export default function Home() {
 
@@ -17,7 +46,8 @@ export default function Home() {
   const skillsRef = useRef(null)
   const contactRef  = useRef(null)
   const [scrolled, setScrolled ] = useState(false)
-
+  const skillTitle = "text-center font-bold text-3xl text-gray-800 m-3"
+  const skillBoxStyle = "bg-gray-100 grid-cols-3 grid-rows-3 grid aspect-square justify-items-center items-center justify-center p-10 gap-5 rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -60,15 +90,20 @@ export default function Home() {
       <main   className="bg-sunsetMobile sm:bg-sunset w-full bg-fixed bg-no-repeat bg-cover w-min-[320px] h-screen  flex items-center sm:justify-center ">
 
         <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
+          
           <div className='text-black'>
           <h2 className='text-2xl sm:text-7xl font-bold text-center'> Hi I'm Sam</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '> A creative programmer with a devoted passion for technology</p>
+        <p className='text-xl  sm:text-3xl text-center bg-gray-200 bg-opacity-20 rounded-lg p-1  '> A creative programmer with a devoted passion for technology</p>
           </div>
-          <Image alt='waving memoji' width={200}  src={waving}></Image>
+
+          <div className='animate-mover '>
+          <Image alt='avatar of self' width={200}  src={avatarArms}></Image>
+          </div>
 
 
         </section>
+
 
   
 
@@ -86,12 +121,76 @@ export default function Home() {
 <section ref={skillsRef}> 
   <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-medium text-center items-center '> Skills</h2>
 
-  <div className='flex flex-col sm:flex-row items-center justify-center gap-10 my-10'>
+  <div className="flex flex-col gap-5 md:flex-row justify-around items-center  mx-10 my-10">
+
+      <div>
+      <h3 className={skillTitle}> Frontend </h3>
+      <div  className={skillBoxStyle}>
+
+    <Icon src={htmllogo} width={75} name="HTML5"/>
+    <Icon src={css} width={55} name="CSS3"/>
+    <Icon src={jslogo} width={50} name="JavaScript"/>
+    <Icon src={react} width={60} name="React"/>
+    <Icon src={nextjs} width={70} name="Next.js"/>
+    <Icon src={recoil} width={70} name="Recoil"/>
+    <Icon src={tailwind} width={65} name="Tailwind"/>
+    <Icon src={webpack} width={80} name="Webpack"/>
+      
 
 
-      <Frontend></Frontend>
-      <Backend></Backend>
-      <OtherStack></OtherStack>
+
+      </div>
+      </div>
+
+
+    <div>
+      <h3 className={skillTitle}> Backend</h3>
+      <div  className={skillBoxStyle}>
+      
+
+
+
+
+
+
+
+
+
+
+      <Icon name="Node" src={node} width={75}/>
+      <Icon  name="" src={express} width={80}/>
+       <Icon name="Postgres" src={postgres} width={50} />
+      <Icon  name="Firebase" src={firebase} width={70}/>
+      <Icon name="Graphql" src={graphql} width={70}/>
+      <Icon name="Nginx" src={nginx} width={50}/>
+      <Icon name="Mongodb" src={mongodb} width={80}/>
+       <Icon name="" src={flask} width={50} />
+
+
+      </div>
+
+      </div>
+
+      <div>
+    <h3 className={skillTitle}> Other </h3>
+    
+      <div className={skillBoxStyle}>
+      <Icon name={''}   src={docker} width={80} />
+      <Icon name="CLI" src={cli} width={60} />
+      <Icon name="" src={git} width={80} />
+      <Icon name={"Github"} src={github} width={50} />
+      <Icon name="Java" src={java} width={60} />
+      <Icon name="Jest" src={jest} width={50} />
+      <Icon name="Linux" src={linux} width={50} />
+      <Icon name="" src={opencv} width={50} />
+      <Icon name="TFJS" src={tensorflow} width={70} />
+      </div>
+
+
+      </div>
+
+   
+
   </div>
 
   

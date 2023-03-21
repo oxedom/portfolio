@@ -16,13 +16,23 @@ module.exports = {
 
 
     },
+    
+    animation: { 
+   fade: "fadeOut 1s ease-in-out",
+    mover: "floater 2s infinite alternate",
+  
+  },
+    keyframes: () => ({
+      fadeOut: {  "0%": { opacity: 0 }},
+      floater:   { 
+        "0%" : { transform: "translateY(0px)" },
+        "100%" : { transform: "translatey(20px)" }
 
-    animation: {   fade: "fadeOut 1s ease-in-out",},
-    keyframes: (opacity) => ({
-      fadeOut: {
-        "0%": { opacity: 0 },
-        // '100%': {color: theme('') },
-      },
+      }
+
+     
+
+      ,
     }),
     
   },

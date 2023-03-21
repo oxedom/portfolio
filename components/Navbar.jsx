@@ -33,11 +33,11 @@ const Navbar = ({projectsRef, contactRef, skillsRef, scrolled}) => {
     return ( 
     
         
-        <nav className={` z-3  mb-5 fixed  max-w-full w-full  h-[100px]  sm:h-25 2xl:h-25 ${scrolled ? "bg-white shadow-sm" : ""}
+        <nav className={` z-3  mb-5 fixed  max-w-full w-full  h-[70px] sm:h-[100px]  sm:h-25 2xl:h-25 ${scrolled ? "bg-white shadow-sm" : ""}
           transition duration-300  gap-2 sm:gap-5 animate-fade p-1`}>
         
         <div className="flex flex-col items-center justify-center">
-        <p className="text-xl text-center sm:text-left sm:text-3xl font-bold "> Sam Brink</p>
+        <p className="text-2xl text-center sm:text-left sm:text-3xl font-bold "> Sam Brink</p>
 
         <div className=" sm:text-2xl flex gap-2 sm:gap-10 justify-center items-center" >
         <p onClick={(e) => { handleScroll("projects")}}  className={sectionStyle} >Projects</p>
