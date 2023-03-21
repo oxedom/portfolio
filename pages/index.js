@@ -49,7 +49,7 @@ export default function Home() {
   const [scrolled, setScrolled ] = useState(false)
   const [showAvatar, setShowAvatar] = useState(true)
   const skillTitle = "text-center font-bold text-3xl text-slate-800 m-3"
-  const skillBoxStyle = "bg-gray-100 gap-8 md:gap-10 text-gray-600 grid-cols-3 shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-16  rounded-lg"
+  const skillBoxStyle = "bg-gray-100 gap-8 md:gap-3 text-gray-600 grid-cols-3 shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-10  rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -197,7 +197,7 @@ export default function Home() {
 </section>
 
 <section className='mx-32'  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-slate-900   my-5 font-bold mx-16'> Projects</h2>
+  <h2 className='text-5xl sm:text-7xl text-slate-900    my-32 mb-32 font-bold mx-16'> Projects</h2>
 
   <ProjectBox></ProjectBox>
 
