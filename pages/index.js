@@ -45,9 +45,10 @@ export default function Home() {
   const projectsRef = useRef(null)
   const skillsRef = useRef(null)
   const contactRef  = useRef(null)
+  const [imageHover, setImageHover] = useState(false)
   const [scrolled, setScrolled ] = useState(false)
   const skillTitle = "text-center font-bold text-3xl text-gray-800 m-3"
-  const skillBoxStyle = "bg-gray-100 grid-cols-3 grid-rows-3 grid aspect-square justify-items-center items-center justify-center p-10 gap-5 rounded-lg"
+  const skillBoxStyle = "bg-gray-100 gap-10 md:gap-5  grid-cols-3 grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-8  rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -91,14 +92,19 @@ export default function Home() {
 
         <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
           
-          <div className='text-black'>
-          <h2 className='text-2xl sm:text-7xl font-bold text-center'> Hi I'm Sam</h2>
+          <div className='text-black   '>
+          <h2 className='text-2xl sm:text-7xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center bg-gray-200 bg-opacity-20 rounded-lg p-1  '> A creative programmer with a devoted passion for technology</p>
+        <p className='text-xl  sm:text-3xl text-center  '> A creative programmer with a devoted passion for technology</p>
           </div>
 
-          <div className='animate-mover '>
-          <Image alt='avatar of self' width={200}  src={avatarArms}></Image>
+          <div onMouseOver={(e) => { setImageHover(true)}} onMouseOut={(e) => { setImageHover(false)}} className='animate-mover flex flex-col p-5 gap-5 transition items-center  tr '>
+          {imageHover ? <a target={"_blank"} className='fixed animate-fade  duration-200  opacity-5 bg-white font-bold p-2 text-black rounded-xl bottom-20 text-bold ' href='https://sambenjaminbrink.myportfolio.com/'> 
+            Click for Photography site!
+            </a> : null }
+            <Image alt='avatar of self' onClick={(e) => {if(imageHover) { window.open('https://sambenjaminbrink.myportfolio.com/')}}}  width={200}   src={avatarArms}></Image>
+   
+
           </div>
 
 
@@ -119,52 +125,39 @@ export default function Home() {
 </section>
 
 <section ref={skillsRef}> 
-  <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-medium text-center items-center '> Skills</h2>
+  <h2 className='text-3xl sm:text-6xl mt-5 mx-2 font-bold text-center items-center '> Skills and tools</h2>
 
-  <div className="flex flex-col gap-5 md:flex-row justify-around items-center  mx-10 my-10">
+  <div className="flex flex-col gap-5 lg:flex-row justify-around items-center  mx-10 my-10">
 
       <div>
       <h3 className={skillTitle}> Frontend </h3>
       <div  className={skillBoxStyle}>
 
-    <Icon src={htmllogo} width={75} name="HTML5"/>
-    <Icon src={css} width={55} name="CSS3"/>
-    <Icon src={jslogo} width={50} name="JavaScript"/>
-    <Icon src={react} width={60} name="React"/>
-    <Icon src={nextjs} width={70} name="Next.js"/>
-    <Icon src={recoil} width={70} name="Recoil"/>
-    <Icon src={tailwind} width={65} name="Tailwind"/>
-    <Icon src={webpack} width={80} name="Webpack"/>
-      
-
-
-
+    <Icon src={htmllogo} width={35} name="HTML5"/>
+    <Icon src={css} width={28} name="CSS3"/>
+    <Icon src={jslogo} width={30} name="JavaScript"/>
+    <Icon src={react} width={40} name="React"/>
+    <Icon src={nextjs} width={40} name="Next.js"/>
+    <Icon src={recoil} width={50} name="Recoil"/>
+    <Icon src={tailwind} width={55} name="Tailwind"/>
+    <Icon src={webpack} width={55} name="Webpack"/>
+    
       </div>
       </div>
 
 
-    <div>
+    <div >
       <h3 className={skillTitle}> Backend</h3>
       <div  className={skillBoxStyle}>
-      
-
-
-
-
-
-
-
-
-
-
-      <Icon name="Node" src={node} width={75}/>
-      <Icon  name="" src={express} width={80}/>
-       <Icon name="Postgres" src={postgres} width={50} />
-      <Icon  name="Firebase" src={firebase} width={70}/>
-      <Icon name="Graphql" src={graphql} width={70}/>
-      <Icon name="Nginx" src={nginx} width={50}/>
-      <Icon name="Mongodb" src={mongodb} width={80}/>
-       <Icon name="" src={flask} width={50} />
+    
+      <Icon name="Node" src={node} width={35}/>
+      <Icon  name="" src={express} width={70}/>
+       <Icon name="Postgres" src={postgres} width={35} />
+      <Icon  name="Firebase" src={firebase} width={40}/>
+      <Icon name="Graphql" src={graphql} width={40}/>
+      <Icon name="Nginx" src={nginx} width={40}/>
+      <Icon name="Mongodb" src={mongodb} width={40}/>
+       <Icon name="" src={flask} width={45} />
 
 
       </div>
@@ -172,18 +165,18 @@ export default function Home() {
       </div>
 
       <div>
-    <h3 className={skillTitle}> Other </h3>
+    <h3 className={skillTitle}> Miscellaneous </h3>
     
       <div className={skillBoxStyle}>
-      <Icon name={''}   src={docker} width={80} />
-      <Icon name="CLI" src={cli} width={60} />
-      <Icon name="" src={git} width={80} />
-      <Icon name={"Github"} src={github} width={50} />
-      <Icon name="Java" src={java} width={60} />
-      <Icon name="Jest" src={jest} width={50} />
-      <Icon name="Linux" src={linux} width={50} />
-      <Icon name="" src={opencv} width={50} />
-      <Icon name="TFJS" src={tensorflow} width={70} />
+      <Icon name={''}   src={docker} width={70} />
+      <Icon name="CLI" src={cli} width={40} />
+      <Icon name="" src={git} width={60} />
+      <Icon name={"Github"} src={github} width={40} />
+      <Icon name="Java" src={java} width={50} />
+      <Icon name="Jest" src={jest} width={35} />
+      <Icon name="Linux" src={linux} width={40} />
+      <Icon name="" src={opencv} width={45} />
+      <Icon name="TFJS" src={tensorflow} width={50} />
       </div>
 
 
@@ -199,8 +192,12 @@ export default function Home() {
 
 
 
-<section ref={contactRef}> 
-    <h1 className='text-5xl text-center font-bold'>  Contact </h1>
+<section className='my-20 flex flex-col gap-5 items-center ' ref={contactRef}> 
+    <h3 className='text-7xl text-center  font-bold'>  Contact <span className='text-lime-600  animate-fade'> me </span> </h3>
+    
+    <span className='text-2xl ' > sambenjaminbrink@gmail.com</span>
+
+  
 </section>
 
 <footer className='flex flex-col justify-center gap-5 items-center py-5  bg-black'>
@@ -219,8 +216,6 @@ export default function Home() {
 
 
 
-    <p  className='text-white font-medium'>  sambenjaminbrink@gmail.com
-    </p>
 
 
 
