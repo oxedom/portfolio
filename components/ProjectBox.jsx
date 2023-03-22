@@ -26,8 +26,8 @@ const ProjectBox = () => {
     }
 
 
-    const selectedStyle ="text-2xl sm:text-3xl font-bold text-black "
-    const unselectedStyle = "text-large sm:text-2xl text-slate-800  "
+    const selectedStyle ="text-4xl sm:text-5xl font-bold text-black "
+    const unselectedStyle = "text-large sm:text-3xl font-semibold text-gray-700 opacity-90  "
     const projects = [
         // {
         //     name: "Parker",
@@ -37,7 +37,7 @@ const ProjectBox = () => {
         //     liveLink: ""
         // },
         {
-            name: "Petagram",
+            name: "Instagram Clone",
             about: "Browse Petagram to view photos of the cutests doggos around! ",
             imageSrc: petagram,
             repoLink: "https://github.com/oxedom/instagram-clone",
@@ -67,23 +67,26 @@ const ProjectBox = () => {
 
     ]
 
-    return ( <div className="flex  ">
+    return ( <div className="flex justify-center gap-2   ">
   
      
 
-   
+            <div className="flex flex-col   "  >
+
+            <div className="  ">
+        {projects.map((el,index) => { return <p className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer  ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</p>})}
+
+        </div>
+        <aside className="bg-gray-100 rounded-md p-5 w-64  h-64 font-medium text-xl "> {projects[selectedIndex]['about']} </aside>
+            </div>
 
       
-        <Image className="rounded-xl" width={500} src={projects[selectedIndex]['imageSrc']}></Image>
+      
 
   
 
 
-        <div className="  grid grid-row-2  justify-around  bg-green-500 p-10 rounded    ">
-        {projects.map((el,index) => { return <p className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer  ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</p>})}
-        <aside className="bg-gray-200 p-5"> {projects[selectedIndex]['about']} </aside>
-        </div>
-
+        <Image className="rounded-xl " width={800} src={projects[selectedIndex]['imageSrc']}></Image>
      
 
     </div>  );

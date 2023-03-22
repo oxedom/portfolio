@@ -197,7 +197,7 @@ export default function Home() {
 </section>
 
 <section className='mx-10'  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-slate-900     font-bold '> Projects</h2>
+  <h2 className='text-5xl sm:text-7xl  mx-32 mb-32 font-bold text-slate-900  items-center '> Projects</h2>
 
   <ProjectBox></ProjectBox>
 
