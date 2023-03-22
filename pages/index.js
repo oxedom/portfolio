@@ -49,7 +49,7 @@ export default function Home() {
   const [scrolled, setScrolled ] = useState(false)
   const [showAvatar, setShowAvatar] = useState(true)
   const skillTitle = "text-center font-bold text-3xl text-slate-800 m-3"
-  const skillBoxStyle = "bg-gray-100 gap-8 md:gap-3 text-gray-600 grid-cols-3 shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-10  rounded-lg"
+  const skillBoxStyle = "bg-gray-100 gap-8  text-gray-600 grid-cols-2 md:grid-cols-3 min-w-[300px] max-w-[450px] shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-6 md:p-2  rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -133,7 +133,7 @@ export default function Home() {
 <section className='my-32' > 
   <h2 className='text-5xl sm:text-7xl  mx-32 mb-32 font-bold text-slate-900  items-center '> Skills and tools</h2>
 
-  <div className="flex flex-col gap-5 lg:flex-row justify-around items-center  mx-10 my-10">
+  <div className="flex flex-col  lg:flex-row justify-around items-center  mx-10 my-10">
 
       <div>
       <h3 className={skillTitle}> Frontend </h3>
@@ -178,7 +178,7 @@ export default function Home() {
       <Icon name="CLI" src={cli} width={40} />
       <Icon name="" src={git} width={60} />
       <Icon name={"Github"} src={github} width={40} />
-      <Icon name="Java" src={java} width={50} />
+      <Icon name="" src={java} width={50} />
       <Icon name="Jest" src={jest} width={35} />
       <Icon name="Linux" src={linux} width={40} />
       <Icon name="" src={opencv} width={45} />
@@ -196,8 +196,8 @@ export default function Home() {
  
 </section>
 
-<section className='mx-32'  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-slate-900    my-32 mb-32 font-bold mx-16'> Projects</h2>
+<section className='mx-10'  ref={projectsRef}> 
+  <h2 className='text-5xl sm:text-7xl text-slate-900     font-bold '> Projects</h2>
 
   <ProjectBox></ProjectBox>
 

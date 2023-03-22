@@ -1,6 +1,10 @@
 import { useState } from "react";
 import Project from "./Project";
 import shoppingCart from "../public/images/projects/shoppingCart.png"
+import cvMaker from "../public/images/projects/cvMaker.png"
+import games from "../public/images/projects/games.png"
+import petagram from "../public/images/projects/petagram.png"
+
 import Image from "next/image";
 
 const ProjectBox = () => {
@@ -24,19 +28,18 @@ const ProjectBox = () => {
 
     const selectedStyle ="text-2xl sm:text-3xl font-bold text-black "
     const unselectedStyle = "text-large sm:text-2xl text-slate-800  "
-    const buttonStyle = "bg-lime-600 text-white rounded-md hidden   p-3 shadow-sm text-sm sm:text-2xl hover:bg-lime-500 duration-300  transition active:border-4 border-slate-200 border-   "
     const projects = [
-        {
-            name: "Parker",
-            about: "Parking App",
-            imageSrc: shoppingCart,
-            repoLink: "https://github.com/oxedom/parker",
-            liveLink: ""
-        },
+        // {
+        //     name: "Parker",
+        //     about: "Parking App",
+        //     imageSrc: shoppingCart,
+        //     repoLink: "https://github.com/oxedom/parker",
+        //     liveLink: ""
+        // },
         {
             name: "Petagram",
             about: "Browse Petagram to view photos of the cutests doggos around! ",
-            imageSrc: shoppingCart,
+            imageSrc: petagram,
             repoLink: "https://github.com/oxedom/instagram-clone",
             liveLink: "https://instagram-backend-79d91.web.app/feed"
         },
@@ -50,38 +53,37 @@ const ProjectBox = () => {
         {
             name: "CV Maker",
             about: "Build a CV using CV Maker! ",
-            imageSrc: shoppingCart,
+            imageSrc: cvMaker,
             repoLink: "https://github.com/oxedom/cv-project",
             liveLink: "https://oxedom.github.io/cv-project/"
         },
         {
             name: "Games ",
-            about: "Build a CV using CV Maker! ",
-            imageSrc: shoppingCart,
-            repoLink: "https://github.com/oxedom/cv-project",
-            liveLink: "https://oxedom.github.io/cv-project/"
+            about: "Tic Tac Toe, Memory Card game, and Battleship",
+            imageSrc: games,
+            repoLink: "https://github.com/oxedom?tab=repositories",
+            liveLink: "https://oxedom.github.io/memory-card/"
         },
 
     ]
 
-    return ( <div className="grid grid-rows-2    lg:mx-40">
-        <div className="grid md:grid-cols-3     justify-center items-center    place-items-center center ">
-        <button  onClick={handleBack} className={buttonStyle}> Back</button>
-        <div className="flex  flex-col sm:flex-row items-center justify-between gap-5">
-        {projects.map((el,index) => { return <p className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</p>})}
+    return ( <div className="flex  ">
+  
+     
 
+   
+
+      
+        <Image className="rounded-xl" width={500} src={projects[selectedIndex]['imageSrc']}></Image>
+
+  
+
+
+        <div className="  grid grid-row-2  justify-around  bg-green-500 p-10 rounded    ">
+        {projects.map((el,index) => { return <p className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer  ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</p>})}
+        <aside className="bg-gray-200 p-5"> {projects[selectedIndex]['about']} </aside>
         </div>
 
-        <button onClick={handleNext} className={buttonStyle}> Next</button>
-        </div>
-
-        <div className="grid grid-cols-2">
-        <Image src={projects[selectedIndex]['imageSrc']}></Image>
-        <aside> {projects[selectedIndex]['about']} </aside>
-        </div>
-
-
-        
      
 
     </div>  );
