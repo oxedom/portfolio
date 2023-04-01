@@ -49,7 +49,7 @@ export default function Home() {
   const [scrolled, setScrolled ] = useState(false)
   const [showAvatar, setShowAvatar] = useState(true)
   const skillTitle = "text-center font-bold text-3xl text-slate-800 m-3"
-  const skillBoxStyle = "bg-gray-100 gap-8  text-gray-600 grid-cols-2 md:grid-cols-3 min-w-[300px] max-w-[450px] shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-6 md:p-2  rounded-lg"
+  const skillBoxStyle = "bg-gray-100  text-gray-600 grid-cols-2 md:grid-cols-2 min-w-[310px] items-center  max-w-[450px] shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-6 md:p-2  rounded-lg"
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -102,7 +102,7 @@ export default function Home() {
         <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
           
           <div className='text-black   '>
-          <h2 className='text-2xl sm:text-7xl font-bold text-center '> Hi I'm Sam,</h2>
+          <h2 className='text-2xl sm:text-4xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
         <p className='text-xl  sm:text-3xl text-center  '>Creative programmer with a devoted passion for technology and learning</p>
           </div>
@@ -133,9 +133,9 @@ export default function Home() {
 <section className='my-32' > 
   <h2 className='text-5xl sm:text-7xl  mx-32 mb-32 font-bold text-slate-900  items-center '> Skills and tools</h2>
 
-  <div className="flex flex-col  lg:flex-row justify-around items-center  mx-10 my-10">
+  <div className="flex flex-col  lg:flex-row justify-center items-center  mx-10 my-10">
 
-      <div>
+      <div className=''>
       <h3 className={skillTitle}> Frontend </h3>
       <div  className={skillBoxStyle}>
 
