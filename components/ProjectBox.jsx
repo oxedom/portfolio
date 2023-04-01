@@ -71,13 +71,18 @@ const ProjectBox = () => {
   
      
 
-            <div className="flex flex-col   "  >
+            <div className="grid gap-2 "  >
 
-            <div className="  ">
-        {projects.map((el,index) => { return <p className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer  ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</p>})}
 
-        </div>
-        <aside className="bg-gray-100 rounded-md p-5 w-64  h-64 font-medium text-xl "> {projects[selectedIndex]['about']} </aside>
+        {projects.map((el,index) => { return <Project
+        liveLink={el.liveLink}
+        repoLink={el.repoLink}
+        imageSrc={el.imageSrc}
+        about={el.about}
+        className={`${(index === selectedIndex) ? selectedStyle : unselectedStyle} hover:cursor-pointer  ` }  onClick={(e) => { setSelectedIndex(index)}}>{el.name}</Project>})}
+        
+
+        {/* <aside className="bg-gray-100 rounded-md p-5 w-64  h-64 font-medium text-xl "> {projects[selectedIndex]['about']} </aside> */}
             </div>
 
       
@@ -86,7 +91,7 @@ const ProjectBox = () => {
   
 
 
-        <Image className="rounded-xl " width={800} src={projects[selectedIndex]['imageSrc']}></Image>
+        {/* <Image className="rounded-xl " width={800} src={projects[selectedIndex]['imageSrc']}></Image> */}
      
 
     </div>  );

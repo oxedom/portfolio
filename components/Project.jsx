@@ -18,7 +18,7 @@ const Project = ({name, about, imageSrc, repoLink, liveLink}) => {
   
         <span className="font-bold text-3xl text-gray-700"> {name} </span>
       
-        <Image width={100}  className="rounded-lg   " src={imageSrc}></Image>
+        <Image width={800}  className="rounded-lg   " src={imageSrc}></Image>
         <p> {about}</p>
         <div>
         <button  className={`${buttonStyle} bg-lime-500  text-white`  } onClick={handleLive} >  Live Site</button>
