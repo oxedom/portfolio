@@ -98,17 +98,17 @@ export default function Home() {
       ></Navbar>
       <main   className="bg-sunsetMobile sm:bg-sunset w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
 
-        <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
+        <section className='mt-5   flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row'>
           
-          <div className='text-gray-900  text-opacity-95   '>
+          <div className='text-gray-900  text-center text-opacity-95   '>
           <h2 className='text-3xl sm:text-5xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '>A Creative programmer with a <br/> devoted passion for technology and learning</p>
+        <p className='text-xl  sm:text-3xl text-center  '>A Creative programmer with a devoted passion for technology and learning</p>
           </div>
 
           <div  className='animate-mover flex flex-col p-5 gap-5 transition items-center  tr '>
 
-           <Image alt='avatar of self' className='animate-fade  duration-100'  width={200}   src={avatarArms}></Image>
+           <Image alt='avatar of self' className='animate-fade max-w-[180px]  duration-100'  width={350}   src={avatarArms}></Image>
             
 
           </div>
