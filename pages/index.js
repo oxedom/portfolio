@@ -38,6 +38,7 @@ import linux from '../public/skills/other/linux_tux.svg'
 import opencv from '../public/skills/other/opencv.svg'
 import tensorflow from '../public/skills/other/tensorflow.svg'
 import webpack from '../public/skills/other/webpack.svg'
+import Skillbox from '@/components/Skillbox'
 
 export default function Home() {
 
@@ -47,8 +48,7 @@ export default function Home() {
   const [imageHover, setImageHover] = useState(false)
   const [scrolled, setScrolled ] = useState(false)
   const [showAvatar, setShowAvatar] = useState(true)
-  const skillTitle = "text-center font-bold text-3xl text-slate-800 my-3"
-  const skillBoxStyle = "bg-gray-100  text-gray-600 grid-cols-2 md:grid-cols-2 items-center  max-w-[450px] shadow-sm grid-rows-3 grid aspect-square  justify-items-center items-center justify-center p-6 md:p-2  rounded-lg"
+
   const handleScroll =(e) => {
 
     if(window.scrollY > 75) 
@@ -127,35 +127,36 @@ export default function Home() {
 
 
 
-<section className='' > 
-  <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900  items-center '> Skills and tools</h2>
+<section className='flex flex-col gap-10  mt-10  ' > 
+  <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  '> Skills and tools</h2>
 
-  <div className="flex flex-col  lg:flex-row justify-center items-center gap-10 p-10">
+  <div className="flex max-w-md items-center justify-center">
 
-      <div className=''>
-      <h3 className={skillTitle}> Frontend </h3>
-      <div  className={skillBoxStyle}>
+
+      {/* <h3 className={skillTitle}> Frontend </h3> */}
+<Skillbox title={"Front-end"}>
+
 
     <Icon src={htmllogo} width={35} name="HTML5"/>
     <Icon src={css} width={28} name="CSS3"/>
     <Icon src={jslogo} width={30} name="JavaScript"/>
     <Icon src={react} width={40} name="React"/>
     <Icon src={nextjs} width={40} name="Next.js"/>
-    {/* <Icon src={recoil} width={50} name="Recoil"/> */}
+    <Icon src={recoil} width={10} name="Recoil"/>
     <Icon src={tailwind} width={55} name="Tailwind"/>
     <Icon src={webpack} width={55} name="Webpack"/>
 
-    
-
-      </div>
-      </div>
+    </Skillbox>
 
 
-    <div >
-      <h3 className={skillTitle}> Backend</h3>
-      <div  className={skillBoxStyle}>
-    
-      <Icon name="Node" src={node} width={35}/>
+
+
+
+
+  
+
+    <Skillbox  title={'Back-end'}>
+    <Icon name="Node" src={node} width={35}/>
        <Icon name="Postgres" src={postgres} width={35} />
       <Icon  name="Firebase" src={firebase} width={40}/>
       <Icon name="Graphql" src={graphql} width={40}/>
@@ -164,15 +165,16 @@ export default function Home() {
        <Icon name="Flask" src={flask} width={45} />
 
 
-      </div>
+    </Skillbox>
 
-      </div>
 
-      <div>
-    <h3 className={skillTitle}> Miscellaneous </h3>
+
+
     
-      <div className={skillBoxStyle}>
-      <Icon name={'Docker'}   src={docker} width={70} />
+
+      
+    <Skillbox title={'Other'}>
+    <Icon name={'Docker'}   src={docker} width={70} />
       <Icon name="CLI" src={cli} width={40} />
       <Icon name="GIT" src={git} width={60} />
       <Icon name="Java" src={java} width={50} />
@@ -180,10 +182,15 @@ export default function Home() {
       <Icon name="Linux" src={linux} width={40} />
       <Icon name="OpenCV" src={opencv} width={45} />
       <Icon name="TFJS" src={tensorflow} width={50} />
-      </div>
+  
 
 
-      </div>
+    </Skillbox>
+
+    
+
+
+    
 
    
 
