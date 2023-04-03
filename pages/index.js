@@ -15,7 +15,7 @@ import nextjs from '../public/skills/front/nextjs.svg'
 import tailwind from '../public/skills/front/tailwind.svg'
 import jslogo from '../public/skills/front/jslogo.svg'
 import htmllogo from '../public/skills/front/html.svg'
-import recoil from '../public/skills/front/Recoil.png'
+import recoil from '../public/skills/front/Recoil.svg'
 
 
 //Back Skills
@@ -100,10 +100,10 @@ export default function Home() {
 
         <section className='mt-5   flex flex-col sm:mx-5  items-center gap-5 md:justify-center md:flex-row'>
           
-          <div className='text-black   '>
-          <h2 className='text-2xl sm:text-4xl font-bold text-center '> Hi I'm Sam,</h2>
+          <div className='text-gray-900  text-opacity-95   '>
+          <h2 className='text-3xl sm:text-5xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '>Creative programmer with a devoted passion for technology and learning</p>
+        <p className='text-xl  sm:text-3xl text-center  '>A Creative programmer with a devoted passion for technology and learning</p>
           </div>
 
           <div  className='animate-mover flex flex-col p-5 gap-5 transition items-center  tr '>
@@ -130,7 +130,7 @@ export default function Home() {
 <section className='flex flex-col gap-10  mt-10  ' > 
   <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  '> Skills and tools</h2>
 
-  <div className="flex max-w-md items-center justify-center">
+  <div className="flex flex-col lg:flex-row  gap-10  items-center justify-center">
 
 
       {/* <h3 className={skillTitle}> Frontend </h3> */}
@@ -173,7 +173,7 @@ export default function Home() {
     
 
       
-    <Skillbox title={'Other'}>
+    <Skillbox title={'Miscellaneous'}>
     <Icon name={'Docker'}   src={docker} width={70} />
       <Icon name="CLI" src={cli} width={40} />
       <Icon name="GIT" src={git} width={60} />
