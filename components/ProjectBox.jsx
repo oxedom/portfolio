@@ -117,7 +117,8 @@ const ProjectBox = () => {
         about={el.about}
             ></Project>})}
         </div>
-
+        
+        <h5 className="text-center lg:hidden"> and more...</h5>
         
 
      

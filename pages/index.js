@@ -201,16 +201,16 @@ export default function Home() {
 </section>
 
 <section className=''  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-center mt-32 font-bold text-slate-900  items-center'> Projects</h2>
+  <h2 className='text-5xl sm:text-7xl text-center m-20 font-bold text-slate-900  items-center'> Projects</h2>
 
   <ProjectBox></ProjectBox>
 
 </section>
 
 <section className='my-10 flex flex-col gap-5 items-center ' ref={skillsRef}> 
-    <h3 className='text-6xl text-center  font-bold text-slate-900 '>  Contact me </h3>
+    <h3 className='text-5xl text-center  font-bold text-slate-900 '>  Contact me </h3>
     
-    <span className='text-2xl  ' > sambenjaminbrink@gmail.com</span>
+    <span className='text-xl  ' > sambenjaminbrink@gmail.com</span>
 
   
 </section>
