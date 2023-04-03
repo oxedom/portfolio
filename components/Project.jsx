@@ -10,16 +10,16 @@ const Project = ({name, about, imageSrc, repoLink, liveLink, selected, handleSel
         window.open(liveLink)
     }
     
-    return ( <div onClick={handleSelect} className={`rounded-lg w-full flex-col p-5 gap-3 ${selected ? "bg-green-200" : "bg-gray-100" } flex   `}>
+    return ( <div onClick={handleSelect} className={`rounded-lg  w-full flex-col p-5 gap-3 duration-500 shadow transition ${selected ? "bg-purpleSun text-black  " : "bg-gray-200  text-gray-500" } flex   `}>
         
 
   
-        <span className="font-bold text-3xl  text-gray-700"> {name} </span>
+        <span className="font-bold text-3xl  "> {name} </span>
 
         {/* <p> {about}</p> */}
         <div>
-        <button  className={`${buttonStyle} bg-blue-400  text-white`  } onClick={handleLive} > Live Site </button>
-        <button className={`${buttonStyle} bg-white `  } onClick={handleCode}>  Code</button>
+        <button  className={`${buttonStyle} bg-orangeSun hover:saturate-150    text-white`  } onClick={handleLive} > Live Site </button>
+        <button className={`${buttonStyle} bg-white text-black `  } onClick={handleCode}>  Code</button>
     
         </div>
    

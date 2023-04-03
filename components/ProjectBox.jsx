@@ -10,47 +10,41 @@ import Image from "next/image";
 const ProjectBox = () => {
 
     const projects = [
-        // {
-        //     name: "Parker",
-        //     about: "Parking App",
-        //     imageSrc: shoppingCart,
-        //     repoLink: "https://github.com/oxedom/parker",
-        //     liveLink: ""
-        // },
-        // {
-        //     name: "Parkerr",
-        //     about: "Detect and mointor marking lots ",
-        //     imageSrc: petagram,
-        //     repoLink: "https://github.com/oxedom/parker",
-        //     liveLink: "http://parkerr.org/"
-        // },
+
+        {
+            name: "Parkerr",
+            about: "Parking made smart and simple with Parkerr 🚗  ",
+            imageSrc: petagram,
+            repoLink: "https://github.com/oxedom/parker",
+            liveLink: "https://parkerr.org/"
+        },
 
         
         {
-            name: "Instagram Clone",
-            about: "Browse Petagram to view photos of the cutests doggos around! ",
+            name: "Instagram for pets  ",
+            about: "Share your pet's adventures with the world 🐕",
             imageSrc: petagram,
             repoLink: "https://github.com/oxedom/instagram-clone",
             liveLink: "https://instagram-backend-79d91.web.app/feed"
         },
         {
             name: "E-commerce",
-            about: "Shop sam's photography store!",
+            about: "E-commerce Demo store for my photography work 📷.",
             imageSrc: shoppingCart,
             repoLink: "https://github.com/oxedom/shopping-cart",
             liveLink: "https://oxedom.github.io/shopping-cart/"
         },
         {
-            name: "CV Maker",
+            name: "Resume Builder",
             imageSrc: cvMaker,
-            about: "Build a CV using CV Maker! ",
+            about: " Build and your future, one resume at a time!  📝",
             repoLink: "https://github.com/oxedom/cv-project",
             liveLink: "https://oxedom.github.io/cv-project/"
         },
         {
             name: "Games ",
             imageSrc: games,
-            about: "Tic Tac Toe, Memory Card game, and Battleship",
+            about: "Tic Tac Toe, Battleship, Memory Game: Unleash your inner game master! 🎲",
             repoLink: "https://github.com/oxedom?tab=repositories",
             liveLink: "https://oxedom.github.io/memory-card/"
         },
@@ -95,23 +89,25 @@ const ProjectBox = () => {
 
     const selectedStyle ="text-4xl sm:text-5xl font-bold text-black "
     const unselectedStyle = "text-large sm:text-3xl font-semibold text-gray-700 opacity-90  "
-    const btnStyle = "bg-blue-300 rounded-lg text-white font-bold shadow-sm px-7 py-3 hover:bg-blue-400 duration-100"
+
     function handleSelect(index) { setSelectedIndex(index) }
 
     return ( <div className="flex flex-col items-center     justify-center gap-2 p-10   ">
   
-        <div className="flex flex-col  gap-2  ">
+        <div className="flex flex-col w-[300px] md:w-[500px] lg:w-[600px]  gap-3  ">
 
-    
+        <div className="flex gap-2 md:flex-row flex-col">
+
+      
         <Image width={600} className={`w-[300px]   md:w-[500px] lg:w-[600px] duration-500 rounded-lg ${blur ? "blur z-auto" : ""}`} src={projects[selectedIndex]['imageSrc']}></Image>
-        <button className={btnStyle} onClick={() => handleNext()}> Next project </button>
+        <button className={`bg-orangeSun rounded-lg text-white font-bold shadow-sm px-7 py-3 hover:saturate-150 duration-100 active:bg-blue-600`} onClick={() => handleNext()}> Next project </button>
         </div>
 
-        <aside className="w-[300px] md:w-[500px] lg:w-[600px]">
+        <aside className="w-max rounded-lg text-gray-900 p-1 text-lg font-medium ">
         {projects[selectedIndex]['about']}
         </aside>
-            <div className="grid gap-5 md:grid-cols-2 "   >
-
+            <div className="grid gap-5  md:grid-cols-2 "   >
+            </div>
 
         {projects.map((el,index) => { return <Project
         liveLink={el.liveLink}
