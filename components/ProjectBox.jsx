@@ -5,6 +5,7 @@ import cvMaker from "../public/images/projects/cvMaker.png"
 import games from "../public/images/projects/games.png"
 import petagram from "../public/images/projects/petagram.png"
 import output from '../public/images/projects/output.gif'
+import parkerr from '../public/images/projects/parker.png'
 import Image from "next/image";
 
 const ProjectBox = () => {
@@ -13,15 +14,15 @@ const ProjectBox = () => {
 
         {
             name: "Parkerr",
-            about: "Parking made smart and simple with Parkerr 🚗  ",
-            imageSrc: petagram,
+            about: "Smart Parking with Parkerr 🚗  ",
+            imageSrc: parkerr,
             repoLink: "https://github.com/oxedom/parker",
             liveLink: "https://parkerr.org/"
         },
 
         
         {
-            name: "Instagram for pets  ",
+            name: "Instagram for pets",
             about: "Share your pet's adventures with the world 🐕",
             imageSrc: petagram,
             repoLink: "https://github.com/oxedom/instagram-clone",
@@ -42,9 +43,9 @@ const ProjectBox = () => {
             liveLink: "https://oxedom.github.io/cv-project/"
         },
         {
-            name: "Games ",
+            name: "Games!",
             imageSrc: games,
-            about: "Tic Tac Toe, Battleship, Memory Game: Unleash your inner game master! 🎲",
+            about: "Tic Tac Toe, Battleship, Memory Game: Let the games begin! 🎲",
             repoLink: "https://github.com/oxedom?tab=repositories",
             liveLink: "https://oxedom.github.io/memory-card/"
         },
@@ -94,21 +95,18 @@ const ProjectBox = () => {
 
     return ( <div className="flex flex-col items-center     justify-center gap-2 p-10   ">
   
-        <div className="flex flex-col w-[300px] md:w-[500px] lg:w-[600px]  gap-3  ">
+        <div className="flex flex-col p-2  gap-3  ">
 
-        <div className="flex gap-2 md:flex-row flex-col">
+        <div className="flex gap-2 justify-center md:flex-row flex-col">
 
       
-        <Image width={600} className={`w-[300px]   md:w-[500px] lg:w-[600px] duration-500 rounded-lg ${blur ? "blur z-auto" : ""}`} src={projects[selectedIndex]['imageSrc']}></Image>
-        <button className={`bg-orangeSun rounded-lg text-white font-bold shadow-sm px-7 py-3 hover:saturate-150 duration-100 active:bg-blue-600`} onClick={() => handleNext()}> Next project </button>
+        {/* <Image width={600} className={`w-[200px]   md:w-[300px] lg:w-[400px] duration-500 rounded-lg ${blur ? "" : ""}`} src={projects[selectedIndex]['imageSrc']}></Image> */}
         </div>
+        {/* <button className={`bg-orangeSun hover:bg-orangerSun rounded-lg text-white font-bold shadow-sm px-7 py-3 duration-100`} onClick={() => handleNext()}> Next project </button> */}
 
-        <aside className="w-max rounded-lg text-gray-900 p-1 text-lg font-medium ">
-        {projects[selectedIndex]['about']}
-        </aside>
-            <div className="grid gap-5  md:grid-cols-2 "   >
-            </div>
 
+
+        <div className="grid lg:grid-cols-2 gap-5 ">
         {projects.map((el,index) => { return <Project
         liveLink={el.liveLink}
         handleSelect={ () => {handleSelect(index) }}
@@ -118,6 +116,8 @@ const ProjectBox = () => {
         imageSrc={el.imageSrc}
         about={el.about}
             ></Project>})}
+        </div>
+
         
 
      

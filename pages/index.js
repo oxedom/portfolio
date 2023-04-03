@@ -103,7 +103,7 @@ export default function Home() {
           <div className='text-gray-900  text-opacity-95   '>
           <h2 className='text-3xl sm:text-5xl font-bold text-center '> Hi I'm Sam,</h2>
         <h3 className='text-2xl sm:text-4xl font-medium text-center'> Software Developer</h3>
-        <p className='text-xl  sm:text-3xl text-center  '>A Creative programmer with a devoted passion for technology and learning</p>
+        <p className='text-xl  sm:text-3xl text-center  '>A Creative programmer with a <br/> devoted passion for technology and learning</p>
           </div>
 
           <div  className='animate-mover flex flex-col p-5 gap-5 transition items-center  tr '>
@@ -221,7 +221,7 @@ export default function Home() {
 
   <a className='text-white flex justify-center items-center gap-3 font-medium ' href='https://github.com/oxedom'>
     <span>
-    Github Profile
+    My Github Profile
     </span>
     <Image alt='github'  className='invert' src={githubIcon} width={40} height={40}></Image>
  </a>
