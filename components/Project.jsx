@@ -12,7 +12,7 @@ const Project = ({name, about, imageSrc, repoLink, liveLink}) => {
         window.open(liveLink)
     }
     
-    return ( <div className="rounded-lg mx-10 flex-col p-5 gap-3 bg-gray-100 flex  shadow ">
+    return ( <div className="rounded-lg flex-col p-5 gap-3 bg-gray-100 flex  shadow ">
         
 
   
