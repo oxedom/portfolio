@@ -93,20 +93,13 @@ const ProjectBox = () => {
 
     function handleSelect(index) { setSelectedIndex(index) }
 
-    return ( <div className="flex flex-col items-center     justify-center gap-2 p-10   ">
+    return ( <div className="flex flex-col items-center       justify-center gap-2 p-10   ">
   
-        <div className="flex flex-col p-2  gap-3  ">
 
-        <div className="flex gap-2 justify-center md:flex-row flex-col">
 
       
-        {/* <Image width={600} className={`w-[200px]   md:w-[300px] lg:w-[400px] duration-500 rounded-lg ${blur ? "" : ""}`} src={projects[selectedIndex]['imageSrc']}></Image> */}
-        </div>
-        {/* <button className={`bg-orangeSun hover:bg-orangerSun rounded-lg text-white font-bold shadow-sm px-7 py-3 duration-100`} onClick={() => handleNext()}> Next project </button> */}
 
-    
-
-        <div className="grid lg:grid-cols-2 gap-16 md:gap-8   ">
+        <div className="grid lg:grid-cols-2 gap-10 md:gap-10   ">
         {projects.map((el,index) => { return <Project
         liveLink={el.liveLink}
         handleSelect={ () => {handleSelect(index) }}
@@ -122,7 +115,7 @@ const ProjectBox = () => {
         
 
      
-            </div>
+  
 
       
       

@@ -27,6 +27,7 @@ import postgres from '../public/skills/back/postgres.png'
 import node from '../public/skills/back/node.svg'
 import flask from '../public/skills/back/flask.svg'
 import nginx from '../public/skills/back/nginx.svg'
+import express from '../public/skills/back/express.svg'
 //General SKills
 import docker from '../public/skills/other/docker.svg'
 import cli from '../public/skills/other/cli.svg'
@@ -98,10 +99,10 @@ export default function Home() {
       ></Navbar>
       <main   className="bg-sunsetMobile sm:bg-sunset w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
 
-        <section className='mt-5   flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row'>
+        <section className='mt-5  flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row'>
           
-          <div className='text-gray-800 ml-3 text-opacity-95   '>
-          <h2 className='text-6xl font-bold md:text-8xl   '> Hi I'm <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-900   to-gray-800 '> Sam</span>,</h2>
+          <div className='text-gray-900 ml-3 text-opacity-95   '>
+          <h2 className='text-6xl font-bold md:text-8xl   '> Hi I'm Sam,</h2>
         <h3 className='text-4xl md:text-5xl font-medium '> Software Developer</h3>
         <p className='text-xl  sm:text-3xl t  '>A Creative programmer with a devoted passion for technology and learning</p>
           </div>
@@ -126,17 +127,18 @@ export default function Home() {
 
 
 
+<section className='flex justify-center'>
 
-<section className=' flex flex-col gap-10  mt-10 border-b pb-10    ' > 
 
+<div className=' flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]' > 
+    
   <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  '> Skills and tools</h2>
 
-  <div className=" flex flex-col lg:flex-row  gap-10  items-center justify-center">
+  <div className=" flex flex-col lg:flex-row gap-12   items-center justify-center">
 
 
       {/* <h3 className={skillTitle}> Frontend </h3> */}
 <Skillbox title={"Front-end"}>
-
 
     <Icon src={htmllogo} width={35} name="HTML5"/>
     <Icon src={css} width={28} name="CSS3"/>
@@ -151,11 +153,6 @@ export default function Home() {
 
 
 
-
-
-
-  
-
     <Skillbox  title={'Back-end'}>
     <Icon name="Node" src={node} width={35}/>
        <Icon name="Postgres" src={postgres} width={35} />
@@ -164,16 +161,11 @@ export default function Home() {
       <Icon name="Nginx" src={nginx} width={40}/>
       <Icon name="Mongodb" src={mongodb} width={40}/>
        <Icon name="Flask" src={flask} width={45} />
-
+       <Icon name="Express" src={express} width={45} />
 
     </Skillbox>
 
 
-
-
-    
-
-      
     <Skillbox title={'Miscellaneous'}>
     <Icon name={'Docker'}   src={docker} width={70} />
       <Icon name="CLI" src={cli} width={40} />
@@ -183,28 +175,25 @@ export default function Home() {
       <Icon name="Linux" src={linux} width={40} />
       <Icon name="OpenCV" src={opencv} width={45} />
       <Icon name="TFJS" src={tensorflow} width={50} />
-  
-
-
     </Skillbox>
 
-    
-
-
-    
-
-   
 
   </div>
 
-  
+
  
+</div>
 </section>
 
-<section className='mt-10'  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center'> Projects</h2>
 
-  <ProjectBox></ProjectBox>
+<section className='flex justify-center  '  ref={projectsRef}> 
+
+<div className='flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]'>
+<h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center'> Projects</h2>
+
+<ProjectBox></ProjectBox>
+</div>
+
 
 </section>
 
