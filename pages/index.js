@@ -209,20 +209,20 @@ export default function Home() {
 </section>
 
 <section className='my-10 flex flex-col gap-5 items-center  ' ref={skillsRef}> 
-    <h3 className='text-5xl text-center  font-bold text-slate-900 '>  Contact me </h3>
+    <h3 className='text-5xl md:text-7xl text-center  font-bold text-slate-900 '>  Contact me </h3>
     
-    <span className='text-xl  ' > sambenjaminbrink@gmail.com</span>
+    <span className='text-xl md:text-2xl ' > sambenjaminbrink@gmail.com</span>
 
   
 </section>
 
-<footer ref={contactRef} className='flex flex-col justify-center gap-2 items-center py-5  bg-black'>
+<footer ref={contactRef} className='flex flex-col justify-center gap-2 items-center py-3  bg-black'>
   
   <div className='flex justify-center items-center '>
 
   <a className='text-white flex justify-center items-center gap-3 font-medium ' href='https://github.com/oxedom'>
     <span>
-    My Github Profile
+
     </span>
     <Image alt='github'  className='invert' src={githubIcon} width={40} height={40}></Image>
  </a>

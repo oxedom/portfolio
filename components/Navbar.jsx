@@ -43,7 +43,7 @@ const Navbar = ({projectsRef, contactRef, skillsRef, scrolled}) => {
         <p onClick={(e) => { handleScroll("projects")}}  className={sectionStyle} >Projects</p>
         <p onClick={(e) => { handleScroll("skills")}} className={sectionStyle}>Skills</p>
         <p onClick={(e) => { handleScroll("contact")}}  className={sectionStyle}>Contact</p>
-
+        <a target="_blank" href="https://github.com/oxedom/" className={sectionStyle}> Github</a>
         </div>
 
         </div>
