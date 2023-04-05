@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+// import Image from "next/image";
 
 import avatarArms from "../public/images/laptop.png";
 import Navbar from "../components/Navbar";
@@ -40,9 +40,9 @@ import webpack from "../public/skills/other/webpack.svg";
 import Skillbox from "@/components/Skillbox";
 
 export default function Home() {
-  const projectsRef = useRef(undefined);
-  const skillsRef = useRef(undefined);
-  const contactRef = useRef(undefined);
+  const projectsRef = useRef(null);
+  const skillsRef = useRef(null);
+  const contactRef = useRef(null);
 
 
   const [scrolled, setScrolled] = useState(false);
@@ -117,12 +117,12 @@ export default function Home() {
             </div>
 
             <div className="animate-mover flex flex-col p-5 gap-5 transition items-center  tr ">
-              <Image
+              {/* <Image
                 alt="avatar of self"
                 className="animate-fade max-w-[180px]  duration-100"
                 width={350}
                 src={avatarArms}
-              ></Image>
+              ></Image> */}
             </div>
           </section>
         </main>
@@ -222,3 +222,5 @@ export default function Home() {
     </>
   );
 }
+
+

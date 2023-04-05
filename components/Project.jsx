@@ -1,5 +1,5 @@
-import Image from "next/image";
-import codeSvg from "../public/images/codeSvg.svg";
+// import Image from "next/image";
+// import codeSvg from "../public/images/codeSvg.svg";
 const Project = ({
   name,
   about,

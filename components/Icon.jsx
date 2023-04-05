@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 
 const Icon = ({ name, src, width, height }) => {
   return (
@@ -10,9 +10,9 @@ const Icon = ({ name, src, width, height }) => {
         height={40}
         src={src}
       ></Image> */}
-      {name.length > 0 ? (
+
         <p className="text-align text-gray-800 font-medium ">{name}</p>
-      ) : null}
+   
     </div>
   );
 };

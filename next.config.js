@@ -6,7 +6,8 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  output: "export",
+  
+  // output: "export",
   // images: { disableStaticImages: true}
 }
 
