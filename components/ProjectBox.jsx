@@ -104,9 +104,9 @@ const ProjectBox = () => {
         </div>
         {/* <button className={`bg-orangeSun hover:bg-orangerSun rounded-lg text-white font-bold shadow-sm px-7 py-3 duration-100`} onClick={() => handleNext()}> Next project </button> */}
 
+    
 
-
-        <div className="grid lg:grid-cols-2 gap-16 md:gap-22  ">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-8   ">
         {projects.map((el,index) => { return <Project
         liveLink={el.liveLink}
         handleSelect={ () => {handleSelect(index) }}
