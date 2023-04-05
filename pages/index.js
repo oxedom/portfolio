@@ -117,12 +117,12 @@ export default function Home() {
             </div>
 
             <div className="animate-mover flex flex-col p-5 gap-5 transition items-center  tr ">
-              {/* <Image
+              <Image
                 alt="avatar of self"
                 className="animate-fade max-w-[180px]  duration-100"
                 width={350}
                 src={avatarArms}
-              ></Image> */}
+              ></Image>
             </div>
           </section>
         </main>
@@ -208,13 +208,13 @@ export default function Home() {
               href="https://github.com/oxedom"
             >
               <span></span>
-              {/* <Image
+              <Image
                 alt="github"
                 className="invert"
                 src={githubIcon}
                 width={40}
                 height={40}
-              ></Image> */}
+              ></Image>
             </a>
           </div>
         </footer>
