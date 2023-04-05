@@ -1,7 +1,13 @@
+
+
+
 /** @type {import('next').NextConfig} */
+
+
 const nextConfig = {
   reactStrictMode: true,
   output: "export",
-};
+  // images: { disableStaticImages: true}
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig

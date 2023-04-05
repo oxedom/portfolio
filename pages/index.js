@@ -104,7 +104,7 @@ export default function Home() {
             <div className="text-gray-900 ml-3 text-opacity-95   ">
               <h2 className="text-6xl font-bold md:text-8xl   ">
                 {" "}
-                Hi I'm Sam,
+                Hi I&apos;m Sam,
               </h2>
               <h3 className="text-4xl md:text-5xl font-medium ">
                 {" "}

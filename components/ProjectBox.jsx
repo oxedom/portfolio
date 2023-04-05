@@ -91,6 +91,7 @@ const ProjectBox = () => {
         {projects.map((el, index) => {
           return (
             <Project
+              key={el.repoLink}
               liveLink={el.liveLink}
               handleSelect={() => {
                 handleSelect(index);

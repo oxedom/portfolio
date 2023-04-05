@@ -26,7 +26,7 @@ const Project = ({
         {" "}
         {name}{" "}
       </span>
-      <Image className="rounded-lg" width={500} src={imageSrc}></Image>
+      {/* <Image className="rounded-lg"  alt={name} width={500} src={imageSrc}></Image> */}
       <p className="p-2 text-center text-lg text-gray-800"> {about}</p>
       <div className="grid   grid-cols-2">
         <button
@@ -40,7 +40,7 @@ const Project = ({
           className={`${buttonStyle} bg-white flex items-center justify-center text-black grow`}
           onClick={handleCode}
         >
-          <Image width={30} className="opacity-75" src={codeSvg} />
+          {/* <Image alt="Code </>" width={30} className="opacity-75" src={codeSvg} /> */}
         </button>
       </div>
     </div>
