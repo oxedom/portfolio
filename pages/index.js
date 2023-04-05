@@ -127,7 +127,7 @@ export default function Home() {
 
 
 
-<section className=' flex flex-col gap-10  mt-10   ' > 
+<section className=' flex flex-col gap-10  mt-10 border-b pb-10    ' > 
 
   <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  '> Skills and tools</h2>
 
@@ -201,8 +201,8 @@ export default function Home() {
  
 </section>
 
-<section className=''  ref={projectsRef}> 
-  <h2 className='text-5xl sm:text-7xl text-center m-20 font-bold text-slate-900  items-center'> Projects</h2>
+<section className='mt-10'  ref={projectsRef}> 
+  <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center'> Projects</h2>
 
   <ProjectBox></ProjectBox>
 

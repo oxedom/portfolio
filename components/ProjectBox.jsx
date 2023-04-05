@@ -118,7 +118,7 @@ const ProjectBox = () => {
             ></Project>})}
         </div>
         
-        <h5 className="text-center lg:hidden"> and more...</h5>
+        {/* <h5 className="text-center lg:hidden"> and more...</h5> */}
         
 
      
