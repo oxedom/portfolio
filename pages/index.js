@@ -47,13 +47,13 @@ export default function Home() {
 
   const [scrolled, setScrolled] = useState(true);
 
-  // const handleScroll = (e) => {
-  //   if (window.scrollY > 75 ) {
-  //     setScrolled(true);
-  //   } else {
-  //     setScrolled(false);
-  //   }
-  // };
+  const handleScroll = (e) => {
+    if (window.scrollY > 75 ) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -119,7 +119,7 @@ export default function Home() {
             <div className="animate-mover flex flex-col p-5 gap-5 transition items-center  tr ">
               <Image
                 alt="avatar of self"
-                className="animate-fade max-w-[180px]  duration-100"
+                className=" max-w-[180px]  duration-100"
                 width={350}
                 src={avatarArms}
               ></Image>
