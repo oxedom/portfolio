@@ -106,7 +106,7 @@ const ProjectBox = () => {
 
 
 
-        <div className="grid lg:grid-cols-2 gap-5  ">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-22  ">
         {projects.map((el,index) => { return <Project
         liveLink={el.liveLink}
         handleSelect={ () => {handleSelect(index) }}

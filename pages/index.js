@@ -100,8 +100,8 @@ export default function Home() {
 
         <section className='mt-5   flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row'>
           
-          <div className='text-gray-900 ml-3 text-opacity-95   '>
-          <h2 className='text-6xl font-bold md:text-8xl  '> Hi I'm <span className='text-transparent bg-clip-text bg-gradient-to-b from-purple-600 drop-shadow-sm  to-orange-400 '> Sam</span>,</h2>
+          <div className='text-gray-800 ml-3 text-opacity-95   '>
+          <h2 className='text-6xl font-bold md:text-8xl   '> Hi I'm <span className='text-transparent bg-clip-text bg-gradient-to-b from-gray-900   to-gray-800 '> Sam</span>,</h2>
         <h3 className='text-4xl md:text-5xl font-medium '> Software Developer</h3>
         <p className='text-xl  sm:text-3xl t  '>A Creative programmer with a devoted passion for technology and learning</p>
           </div>

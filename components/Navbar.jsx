@@ -37,7 +37,7 @@ const Navbar = ({projectsRef, contactRef, skillsRef, scrolled}) => {
           transition duration-300  gap-2 sm:gap-5 animate-fade p-1`}>
         
         <div className="flex flex-col md:flex-row md:gap-5 items-center md:justify-start md:ml-5 justify-center ">
-        <p className="text-2xl text-center sm:text-left sm:text-3xl font-bold "> Sam Brink</p>
+        <p className="text-2xl text-center text-gray-800 sm:text-left sm:text-3xl font-bold "> Sam Brink</p>
 
         <div className=" sm:text-2xl flex gap-2 sm:gap-10 justify-center items-center" >
         <p onClick={(e) => { handleScroll("projects")}}  className={sectionStyle} >Projects</p>
