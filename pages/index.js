@@ -45,15 +45,15 @@ export default function Home() {
   const contactRef = useRef(null);
 
 
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(true);
 
-  const handleScroll = (e) => {
-    if (window.scrollY > 75) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
+  // const handleScroll = (e) => {
+  //   if (window.scrollY > 75 ) {
+  //     setScrolled(true);
+  //   } else {
+  //     setScrolled(false);
+  //   }
+  // };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
