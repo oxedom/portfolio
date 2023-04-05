@@ -101,8 +101,8 @@ export default function Home() {
         <section className='mt-5   flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row'>
           
           <div className='text-gray-900 ml-3 text-opacity-95   '>
-          <h2 className='text-6xl font-bold  '> Hi I'm Sam,</h2>
-        <h3 className='text-4xl sm:text-4xl font-medium '> Software Developer</h3>
+          <h2 className='text-6xl font-bold md:text-8xl  '> Hi I'm <span className='text-transparent bg-clip-text bg-gradient-to-b from-purple-600 drop-shadow-sm  to-orange-400 '> Sam</span>,</h2>
+        <h3 className='text-4xl md:text-5xl font-medium '> Software Developer</h3>
         <p className='text-xl  sm:text-3xl t  '>A Creative programmer with a devoted passion for technology and learning</p>
           </div>
 
@@ -209,7 +209,7 @@ export default function Home() {
 </section>
 
 <section className='my-10 flex flex-col gap-5 items-center  ' ref={skillsRef}> 
-    <h3 className='text-5xl md:text-7xl text-center  font-bold text-slate-900 '>  Contact me </h3>
+    <h3 className='text-6xl md:text-7xl text-center  font-bold text-slate-900 '>  Contact me </h3>
     
     <span className='text-xl md:text-2xl ' > sambenjaminbrink@gmail.com</span>
 
