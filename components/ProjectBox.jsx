@@ -8,6 +8,8 @@ import output from '../public/images/projects/output.gif'
 import parkerr from '../public/images/projects/parker.png'
 import Image from "next/image";
 
+
+
 const ProjectBox = () => {
 
     const projects = [
@@ -93,7 +95,7 @@ const ProjectBox = () => {
 
     function handleSelect(index) { setSelectedIndex(index) }
 
-    return ( <div className="flex flex-col items-center       justify-center gap-2 p-10   ">
+    return ( <div className="flex flex-col items-center       justify-center gap-2 p-5   ">
   
 
 
