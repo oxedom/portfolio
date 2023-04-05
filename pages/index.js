@@ -127,10 +127,11 @@ export default function Home() {
 
 
 
-<section className='flex flex-col gap-10  mt-10  ' > 
+<section className=' flex flex-col gap-10  mt-10   ' > 
+
   <h2 className='text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  '> Skills and tools</h2>
 
-  <div className="flex flex-col lg:flex-row  gap-10  items-center justify-center">
+  <div className=" flex flex-col lg:flex-row  gap-10  items-center justify-center">
 
 
       {/* <h3 className={skillTitle}> Frontend </h3> */}
@@ -207,7 +208,7 @@ export default function Home() {
 
 </section>
 
-<section className='my-10 flex flex-col gap-5 items-center ' ref={skillsRef}> 
+<section className='my-10 flex flex-col gap-5 items-center  ' ref={skillsRef}> 
     <h3 className='text-5xl text-center  font-bold text-slate-900 '>  Contact me </h3>
     
     <span className='text-xl  ' > sambenjaminbrink@gmail.com</span>
