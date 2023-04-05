@@ -32,7 +32,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
 
   return (
     <nav
-      className={` z-3  mb-5 block lg:fixed  max-w-full w-full  h-[70px] md:flex md:items-center   sm:h-25 2xl:h-25 ${
+      className={` z-3  mb-5 fixed  top-0 w-full max-w-full w-full  h-[70px] md:flex md:items-center   sm:h-25 2xl:h-25 ${
         scrolled ? "bg-white shadow-sm" : ""
       }
           transition duration-300  gap-2 sm:gap-5 animate-fade p-1`}
