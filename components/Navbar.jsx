@@ -13,13 +13,17 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
 
   function handleScroll(value) {
     
-    if (value === "projects") {
-      doScroll(projectsRef.current);
-    } else if (value === "skills") {
-      doScroll(skillsRef.current);
-    } else if (value === "contact") {
-      doScroll(contactRef.current);
-    }
+    if(projectsRef.current && skillsRef.current & contactRef.current) 
+    {
+      if (value === "projects") {
+        doScroll(projectsRef.current);
+      } else if (value === "skills") {
+        doScroll(skillsRef.current);
+      } else if (value === "contact") {
+        doScroll(contactRef.current);
+      }
+    }  
+
   }
 
   const sectionStyle = `text-gray-700 hover:text-black p-1 mb ${

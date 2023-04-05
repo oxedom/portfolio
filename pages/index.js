@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import Image from "next/image";
+import Image from "next/image";
 
 import avatarArms from "../public/images/laptop.png";
 import Navbar from "../components/Navbar";
@@ -208,13 +208,13 @@ export default function Home() {
               href="https://github.com/oxedom"
             >
               <span></span>
-              <Image
+              {/* <Image
                 alt="github"
                 className="invert"
                 src={githubIcon}
                 width={40}
                 height={40}
-              ></Image>
+              ></Image> */}
             </a>
           </div>
         </footer>
