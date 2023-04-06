@@ -70,7 +70,7 @@ export default function Home() {
         <meta name="description" content="Sam Brink's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon/favicon.ico" />
-        <link
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="favicon/apple-touch-icon.png"
@@ -92,7 +92,7 @@ export default function Home() {
           rel="mask-icon"
           href="favicon/safari-pinned-tab.svg"
           color="#5bbad5"
-        />
+        /> */}
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
