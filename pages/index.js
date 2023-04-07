@@ -115,7 +115,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="animate-mover z-2 flex flex-col p-5 gap-5 transition items-center   ">
+            <div className={`${!scrolled ? "animate-mover" : "" } "z-2 flex flex-col p-5 gap-5  transition items-center"   `}>
               <Image
                 alt="avatar of self"
                 className=" max-w-[180px]  duration-100"
