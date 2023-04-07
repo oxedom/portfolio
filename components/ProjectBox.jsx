@@ -32,7 +32,7 @@ const ProjectBox = () => {
     {
       name: "Resume Builder",
       imageSrc: cvMaker,
-      about: " Build and your future, one resume at a time!  📝",
+      about: " Build your future, one resume at a time!  📝",
       repoLink: "https://github.com/oxedom/cv-project",
       liveLink: "https://oxedom.github.io/cv-project/",
     },
