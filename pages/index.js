@@ -18,7 +18,6 @@ import htmllogo from "../public/skills/front/html.svg";
 import recoil from "../public/skills/front/Recoil.svg";
 
 //Back Skills
-// import express from '../public/skills/back/expres.svg'
 import firebase from "../public/skills/back/firebase.svg";
 import graphql from "../public/skills/back/graphql.svg";
 import mongodb from "../public/skills/back/mongodb.svg";
@@ -27,6 +26,7 @@ import node from "../public/skills/back/node.svg";
 import flask from "../public/skills/back/flask.svg";
 import nginx from "../public/skills/back/nginx.svg";
 import express from "../public/skills/back/express.svg";
+
 //General SKills
 import docker from "../public/skills/other/docker.svg";
 import cli from "../public/skills/other/cli.svg";
@@ -56,9 +56,7 @@ export default function Home() {
   };
 
 
-  useEffect(() => {
- 
-  }, [])
+
   // useEffect(() => {
   //   window.addEventListener("scroll", handleScroll);
   // }, []);
@@ -70,7 +68,7 @@ export default function Home() {
         <meta name="description" content="Sam Brink's Portfolio" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="favicon/favicon.ico" />
-        {/* <link
+        <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="favicon/apple-touch-icon.png"
@@ -92,7 +90,7 @@ export default function Home() {
           rel="mask-icon"
           href="favicon/safari-pinned-tab.svg"
           color="#5bbad5"
-        /> */}
+        />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>

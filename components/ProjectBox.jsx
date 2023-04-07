@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
 import Project from "./Project";
 import shoppingCart from "../public/images/projects/shoppingCart.png";
 import cvMaker from "../public/images/projects/cvMaker.png";
 import games from "../public/images/projects/games.png";
 import petagram from "../public/images/projects/petagram.png";
 import parkerr from "../public/images/projects/parker.png";
-import Image from "next/image";
 
 const ProjectBox = () => {
   const projects = [
@@ -49,11 +47,6 @@ const ProjectBox = () => {
 
 
 
-
-
-  // imageGif()
-
-  // imageGif()
 
   const selectedStyle = "text-4xl sm:text-5xl font-bold text-black ";
   const unselectedStyle =
