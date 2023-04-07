@@ -32,7 +32,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
       }
           transition duration-300  gap-2 sm:gap-5  p-1`}
     >
-      <div className="flex flex-col md:flex-row md:gap-5 items-center md:justify-start md:ml-5 justify-center ">
+      {/* <div className="flex flex-col md:flex-row md:gap-5 items-center md:justify-start md:ml-5 justify-center ">
         <p className="text-2xl text-center text-gray-800 sm:text-left sm:text-3xl font-bold ">
           {" "}
           Sam Brink
@@ -72,7 +72,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
             Github
           </a>
         </div>
-      </div>
+      </div> */}
     </nav>
   );
 };
