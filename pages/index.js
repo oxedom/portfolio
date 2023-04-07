@@ -44,7 +44,7 @@ export default function Home() {
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
-  const [scrolled, setScrolled] = useState(true);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleScroll = (e) => {
     if (window.scrollY > 75) {
@@ -54,9 +54,9 @@ export default function Home() {
     }
   };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
