@@ -36,12 +36,13 @@ const Project = ({ name, about, imageSrc, repoLink, liveLink }) => {
           className={`${buttonStyle} bg-white flex items-center justify-center text-black grow`}
           onClick={handleCode}
         >
-          <Image
+          <p> Code </p>
+          {/* <Image
             alt="Code </>"
             width={30}
             className=""
             src={codeSvg}
-          />
+          /> */}
         </button>
       </div>
     </div>
