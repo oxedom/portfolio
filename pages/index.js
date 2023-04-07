@@ -100,7 +100,7 @@ export default function Home() {
         ></Navbar>
         <main className="bg-gradient-to-t   from-rose-300 to-violet-300  lg:bg-sunset  w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
           <section className="mt-5  flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row">
-            <div className="text-gray-900 ml-3 text-opacity-95   ">
+            <div className="text-gray-900 mt-10 sm:mt-0 ml-3 text-opacity-95   ">
               <h2 className="text-6xl font-bold md:text-8xl   ">
                 {" "}
                 Hi I&apos;m Sam,
