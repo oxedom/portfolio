@@ -47,30 +47,9 @@ const ProjectBox = () => {
     },
   ];
 
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [blur, setBlur] = useState(false);
-  function handleNext() {
-    if (selectedIndex < projects.length - 1) {
-      setSelectedIndex((prev) => prev + 1);
-    } else {
-      setSelectedIndex(0);
-    }
-  }
 
-  function handleBack() {
-    if (selectedIndex > 0) {
-      setSelectedIndex((prev) => prev - 1);
-    } else {
-      setSelectedIndex(projects.length - 1);
-    }
-  }
 
-  useEffect(() => {
-    setBlur(true);
-    setTimeout(() => {
-      setBlur(false);
-    }, 150);
-  }, [selectedIndex]);
+
 
   // imageGif()
 
@@ -80,9 +59,7 @@ const ProjectBox = () => {
   const unselectedStyle =
     "text-large sm:text-3xl font-semibold text-gray-700 opacity-90  ";
 
-  function handleSelect(index) {
-    setSelectedIndex(index);
-  }
+
 
   return (
     <div className="flex flex-col items-center       justify-center gap-2 p-5   ">
@@ -92,11 +69,7 @@ const ProjectBox = () => {
             <Project
               key={el.repoLink}
               liveLink={el.liveLink}
-              handleSelect={() => {
-                handleSelect(index);
-              }}
               repoLink={el.repoLink}
-              selected={index === selectedIndex}
               name={el.name}
               imageSrc={el.imageSrc}
               about={el.about}

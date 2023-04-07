@@ -6,8 +6,6 @@ const Project = ({
   imageSrc,
   repoLink,
   liveLink,
-  selected,
-  handleSelect,
 }) => {
   const buttonStyle = " px-5 py-2  font-bold text-lg rounded-lg m-1 shadow";
   const handleCode = () => {
@@ -19,7 +17,6 @@ const Project = ({
 
   return (
     <div
-      onClick={handleSelect}
       className={`w-auto text-gray-900    grid grid-row-4 px-5 pb-2 rounded-lg justify-center items-center place-items-center     duration-200 shadow transition  bg-gradient-to-b from-gray-100   to-gray-50 }    `}
     >
       <span className="font-bold text-2xl text-gray-700 text-center  p-5">
