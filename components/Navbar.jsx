@@ -1,23 +1,24 @@
 const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
   function doScroll(element) {
-    if (element.current) {
+ 
       element.scrollIntoView({
         behavior: "smooth",
         block: "end",
         inline: "nearest",
       });
-    }
+ 
   }
 
   function handleScroll(value) {
-    if (projectsRef.current && skillsRef.current & contactRef.current) {
+    
+  
       if (value === "projects") {
         doScroll(projectsRef.current);
       } else if (value === "skills") {
         doScroll(skillsRef.current);
       } else if (value === "contact") {
         doScroll(contactRef.current);
-      }
+      
     }
   }
 
@@ -27,7 +28,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
 
   return (
     <nav
-      className={` z-99  fixed mb-5   top-0 w-full max-w-full   h-[70px]  sm:h-25 2xl:h-25 ${
+      className={` z-99  fixed mb-5   top-0 w-full max-w-full h-[80px]   md:h-[50px]   ${
         scrolled ? "bg-white shadow-sm" : ""
       }
           transition duration-300  gap-2 sm:gap-5  p-1`}
@@ -38,15 +39,8 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
           Sam Brink
         </p>
 
-        <div className=" sm:text-2xl flex gap-2 sm:gap-10 justify-center items-center">
-          <p
-            onClick={(e) => {
-              handleScroll("projects");
-            }}
-            className={sectionStyle}
-          >
-            Projects
-          </p>
+        <div className=" sm:text-2xl flex gap-2 sm:gap-5 justify-center items-center">
+
           <p
             onClick={(e) => {
               handleScroll("skills");
@@ -54,6 +48,14 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
             className={sectionStyle}
           >
             Skills
+          </p>
+          <p
+            onClick={(e) => {
+              handleScroll("projects");
+            }}
+            className={sectionStyle}
+          >
+            Projects
           </p>
           <p
             onClick={(e) => {

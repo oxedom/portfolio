@@ -130,7 +130,7 @@ export default function Home() {
           <div className=" flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
             <h2 className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  ">
               {" "}
-              Skills and tools
+              Skills
             </h2>
 
             <div className=" flex flex-col lg:flex-row gap-12   items-center justify-center">
