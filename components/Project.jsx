@@ -39,7 +39,7 @@ const Project = ({ name, about, imageSrc, repoLink, liveLink }) => {
           <Image
             alt="Code </>"
             width={30}
-            className="opacity-75"
+            className=""
             src={codeSvg}
           />
         </button>
