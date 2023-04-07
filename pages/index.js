@@ -133,7 +133,7 @@ export default function Home() {
               Skills
             </h2>
 
-            <div className=" flex flex-col lg:flex-row gap-12   items-center justify-center">
+            <div ref={skillsRef}  className=" flex flex-col lg:flex-row gap-12    items-center justify-center">
               {/* <h3 className={skillTitle}> Frontend </h3> */}
               <Skillbox title={"Front-end"}>
                 <Icon src={htmllogo} width={35} name="HTML5" />
@@ -171,8 +171,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex justify-center  " ref={projectsRef}>
-          <div className="flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
+        <div ref={projectsRef}></div>
+        <section  className="flex justify-center  " >
+          <div   className="flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
             <h2 className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center">
               {" "}
               Projects

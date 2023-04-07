@@ -11,7 +11,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
 
   function handleScroll(value) {
     
-  
+   
       if (value === "projects") {
         doScroll(projectsRef.current);
       } else if (value === "skills") {
