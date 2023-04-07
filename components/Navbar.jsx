@@ -27,7 +27,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
 
   return (
     <nav
-      className={` z-3  fixed mb-5   top-0 w-full max-w-full   h-[70px]  sm:h-25 2xl:h-25 ${
+      className={` z-99  fixed mb-5   top-0 w-full max-w-full   h-[70px]  sm:h-25 2xl:h-25 ${
         scrolled ? "bg-white shadow-sm" : ""
       }
           transition duration-300  gap-2 sm:gap-5  p-1`}
