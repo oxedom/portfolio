@@ -199,7 +199,7 @@ export default function Home() {
 
         <footer
           ref={contactRef}
-          className="flex flex-col justify-center gap-2 items-center py-3  bg-black"
+          className="flex flex-col justify-center gap-2 items-center pt-6 pb-16  bg-black"
         >
           <div className="flex justify-center items-center ">
             <a
