@@ -36,7 +36,7 @@ const Project = ({ name, about, imageSrc, repoLink, liveLink }) => {
           className={`${buttonStyle} bg-white flex items-center justify-center text-black grow`}
           onClick={handleCode}
         >
-          <p> Code </p>
+          <p className="text-gray-800"> Code </p>
           {/* <Image
             alt="Code </>"
             width={30}
