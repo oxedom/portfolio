@@ -5,7 +5,7 @@ import games from "../public/images/projects/games.png";
 import petagram from "../public/images/projects/petagram.png";
 import parkerr from "../public/images/projects/parker.png";
 
-const ProjectBox = () => {
+const ProjectBox = ({children}) => {
   const projects = [
     {
       name: "Parkerr",
@@ -52,6 +52,7 @@ const ProjectBox = () => {
   return (
     <div className="flex flex-col items-center       justify-center gap-2 p-5   ">
       <div className="grid lg:grid-cols-2 gap-10 md:gap-10   ">
+    
         {projects.map((el, index) => {
           return (
             <Project
@@ -62,8 +63,11 @@ const ProjectBox = () => {
               imageSrc={el.imageSrc}
               about={el.about}
             ></Project>
+            
           );
+
         })}
+                  {children}
       </div>
     </div>
   );

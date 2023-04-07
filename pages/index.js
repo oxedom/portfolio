@@ -171,21 +171,23 @@ export default function Home() {
           </div>
         </section>
 
-        <div  ref={skillsRef}></div>
+        <div ></div>
         <section  className="flex justify-center  " >
           <div   className="flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
-            <h2 className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center">
+            <h2         className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center">
               {" "}
               Projects
             </h2>
 
-            <ProjectBox></ProjectBox>
+            <ProjectBox>
+              <div className=""  ref={projectsRef}></div>
+            </ProjectBox>
           </div>
         </section>
 
         <section
           className="my-10 flex flex-col gap-5 items-center  "
-          ref={projectsRef}
+   
         >
           <h3 className="text-6xl md:text-7xl text-center  font-bold text-slate-900 ">
             {" "}
