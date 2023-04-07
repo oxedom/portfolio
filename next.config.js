@@ -11,7 +11,7 @@ const nextConfig = {
   output: "export",
   swcMinify: true,
   // images: { disableStaticImages: true}
-  images: { unoptimized: true}
+  // images: { unoptimized: true}
 }
 
 module.exports = nextConfig
