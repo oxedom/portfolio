@@ -98,9 +98,9 @@ export default function Home() {
           skillsRef={skillsRef}
           projectsRef={projectsRef}
         ></Navbar>
-        <main className="bg-green-500 w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
+        <main className="bg-gradient-to-t   from-rose-300 to-violet-300  lg:bg-sunset  w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
           <section className="mt-5  flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row">
-            {/* <div className="text-gray-900 ml-3 text-opacity-95   ">
+            <div className="text-gray-900 ml-3 text-opacity-95   ">
               <h2 className="text-6xl font-bold md:text-8xl   ">
                 {" "}
                 Hi I&apos;m Sam,
@@ -113,15 +113,15 @@ export default function Home() {
                 A creative programmer with a devoted passion for technology and
                 learning.
               </p>
-            </div> */}
+            </div>
 
             <div className="animate-mover z-2 flex flex-col p-5 gap-5 transition items-center   ">
-              {/* <Image
+              <Image
                 alt="avatar of self"
                 className=" max-w-[180px]  duration-100"
                 width={350}
                 src={avatarArms}
-              ></Image> */}
+              ></Image>
             </div>
           </section>
         </main>
