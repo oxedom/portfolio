@@ -1,12 +1,6 @@
 import Image from "next/image";
 import codeSvg from "../public/images/codeSvg.svg";
-const Project = ({
-  name,
-  about,
-  imageSrc,
-  repoLink,
-  liveLink,
-}) => {
+const Project = ({ name, about, imageSrc, repoLink, liveLink }) => {
   const buttonStyle = " px-5 py-2  font-bold text-lg rounded-lg m-1 shadow";
   const handleCode = () => {
     window.open(repoLink);
@@ -23,7 +17,12 @@ const Project = ({
         {" "}
         {name}{" "}
       </span>
-      <Image className="rounded-lg"  alt={name} width={500} src={imageSrc}></Image>
+      <Image
+        className="rounded-lg"
+        alt={name}
+        width={500}
+        src={imageSrc}
+      ></Image>
       <p className="p-2 text-center text-lg text-gray-800"> {about}</p>
       <div className="grid   grid-cols-2">
         <button
@@ -37,7 +36,12 @@ const Project = ({
           className={`${buttonStyle} bg-white flex items-center justify-center text-black grow`}
           onClick={handleCode}
         >
-          <Image alt="Code </>" width={30} className="opacity-75" src={codeSvg} />
+          <Image
+            alt="Code </>"
+            width={30}
+            className="opacity-75"
+            src={codeSvg}
+          />
         </button>
       </div>
     </div>

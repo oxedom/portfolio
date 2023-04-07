@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const sharp = require('sharp');
+const fs = require("fs");
+const path = require("path");
+const sharp = require("sharp");
 
 const directoryPath = path.dirname(process.argv[1]);
 
@@ -10,7 +10,7 @@ fs.readdir(directoryPath, (err, files) => {
     return;
   }
 
-  files.forEach(file => {
+  files.forEach((file) => {
     if (file.match(/\.(png|jpe?g|gif)$/)) {
       const filePath = path.join(directoryPath, file);
 
@@ -26,4 +26,3 @@ fs.readdir(directoryPath, (err, files) => {
     }
   });
 });
-

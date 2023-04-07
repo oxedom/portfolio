@@ -45,14 +45,9 @@ const ProjectBox = () => {
     },
   ];
 
-
-
-
   const selectedStyle = "text-4xl sm:text-5xl font-bold text-black ";
   const unselectedStyle =
     "text-large sm:text-3xl font-semibold text-gray-700 opacity-90  ";
-
-
 
   return (
     <div className="flex flex-col items-center       justify-center gap-2 p-5   ">
@@ -70,8 +65,6 @@ const ProjectBox = () => {
           );
         })}
       </div>
-
-
     </div>
   );
 };

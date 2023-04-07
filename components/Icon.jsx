@@ -11,8 +11,7 @@ const Icon = ({ name, src, width, height }) => {
         src={src}
       ></Image>
 
-        <p className="text-align text-gray-800 font-medium ">{name}</p>
-   
+      <p className="text-align text-gray-800 font-medium ">{name}</p>
     </div>
   );
 };

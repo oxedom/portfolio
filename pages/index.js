@@ -44,18 +44,15 @@ export default function Home() {
   const skillsRef = useRef(null);
   const contactRef = useRef(null);
 
-
   const [scrolled, setScrolled] = useState(true);
 
   const handleScroll = (e) => {
-    if (window.scrollY > 75 ) {
+    if (window.scrollY > 75) {
       setScrolled(true);
     } else {
       setScrolled(false);
     }
   };
-
-
 
   // useEffect(() => {
   //   window.addEventListener("scroll", handleScroll);
@@ -119,12 +116,12 @@ export default function Home() {
             </div>
 
             <div className="animate-mover z-2 flex flex-col p-5 gap-5 transition items-center   ">
-              <Image
+              {/* <Image
                 alt="avatar of self"
                 className=" max-w-[180px]  duration-100"
                 width={350}
                 src={avatarArms}
-              ></Image>
+              ></Image> */}
             </div>
           </section>
         </main>
@@ -224,5 +221,3 @@ export default function Home() {
     </>
   );
 }
-
-

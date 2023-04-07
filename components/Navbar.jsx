@@ -1,20 +1,16 @@
 const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
   function doScroll(element) {
-    if(element.current) 
-    {
+    if (element.current) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "end",
         inline: "nearest",
       });
     }
-
   }
 
   function handleScroll(value) {
-    
-    if(projectsRef.current && skillsRef.current & contactRef.current) 
-    {
+    if (projectsRef.current && skillsRef.current & contactRef.current) {
       if (value === "projects") {
         doScroll(projectsRef.current);
       } else if (value === "skills") {
@@ -22,8 +18,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
       } else if (value === "contact") {
         doScroll(contactRef.current);
       }
-    }  
-
+    }
   }
 
   const sectionStyle = `text-gray-700 hover:text-black p-1 mb ${
