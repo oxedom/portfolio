@@ -17,14 +17,14 @@ const ProjectBox = ({children}) => {
     },
     {
       name: "Instagram for pets",
-      about: "Share your pet's adventures with the world 🐕",
+      about: "Share your pet's adventures with the world! 🐕",
       imageSrc: petagram,
       repoLink: "https://github.com/oxedom/instagram-clone",
       liveLink: "https://instagram-backend-79d91.web.app/feed",
     },
     {
       name: "Fitness Studio",
-      about: "A landing page for Guy Vaserman's fitness studio 🔥",
+      about: "A landing page for Guy Vaserman's fitness studio. 🔥",
       imageSrc: guyv,
       repoLink: "https://github.com/oxedom/",
       liveLink: "https://guyvaserman.com/",
@@ -46,7 +46,7 @@ const ProjectBox = ({children}) => {
       liveLink: "https://oxedom.github.io/cv-project/",
     },
     {
-      name: "Games!",
+      name: "Arcade!",
       imageSrc: games,
       about: "Tic Tac Toe, Battleship, Memory Game: Let the games begin! 🎲",
       repoLink: "https://github.com/oxedom?tab=repositories",
