@@ -4,6 +4,7 @@ import cvMaker from "../public/images/projects/cvMaker.png";
 import games from "../public/images/projects/games.png";
 import petagram from "../public/images/projects/petagram.png";
 import parkerr from "../public/images/projects/parker.png";
+import guyv from "../public/images/projects/guyv.png";
 
 const ProjectBox = ({children}) => {
   const projects = [
@@ -14,7 +15,6 @@ const ProjectBox = ({children}) => {
       repoLink: "https://github.com/oxedom/parker",
       liveLink: "https://parkerr.org/",
     },
-
     {
       name: "Instagram for pets",
       about: "Share your pet's adventures with the world 🐕",
@@ -22,6 +22,15 @@ const ProjectBox = ({children}) => {
       repoLink: "https://github.com/oxedom/instagram-clone",
       liveLink: "https://instagram-backend-79d91.web.app/feed",
     },
+    {
+      name: "Fitness Studio",
+      about: "A landing page for Guy Vaserman's fitness studio 🔥",
+      imageSrc: guyv,
+      repoLink: "https://github.com/oxedom/",
+      liveLink: "https://guyvaserman.com/",
+    },
+
+
     {
       name: "E-commerce",
       about: "E-commerce Demo store for my photography work. 📷",
