@@ -46,7 +46,7 @@ const ProjectBox = ({children}) => {
       liveLink: "https://oxedom.github.io/cv-project/",
     },
     {
-      name: "Arcade!",
+      name: "Arcade",
       imageSrc: games,
       about: "Tic Tac Toe, Battleship, Memory Game: Let the games begin! 🎲",
       repoLink: "https://github.com/oxedom?tab=repositories",
