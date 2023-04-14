@@ -38,6 +38,7 @@ import opencv from "../public/skills/other/opencv.svg";
 import tensorflow from "../public/skills/other/tensorflow.svg";
 import webpack from "../public/skills/other/webpack.svg";
 import Skillbox from "../components/Skillbox";
+import Script from 'next/script'
 
 export default function Home() {
   const projectsRef = useRef(null);
@@ -60,6 +61,7 @@ export default function Home() {
 
   return (
     <>
+
       <Head>
         <title>Sam Brink</title>
         <meta name="description" content="Sam Brink's Portfolio" />
