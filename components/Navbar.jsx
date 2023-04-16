@@ -1,29 +1,26 @@
 const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
   function doScroll(element) {
- 
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
- 
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
   }
 
   function handleScroll(value) {
-    
-   
-      if (value === "projects") {
-        doScroll(projectsRef.current);
-      } else if (value === "skills") {
-        doScroll(skillsRef.current);
-      } else if (value === "contact") {
-        doScroll(contactRef.current);
-      
+    if (value === "projects") {
+      doScroll(projectsRef.current);
+    } else if (value === "skills") {
+      doScroll(skillsRef.current);
+    } else if (value === "contact") {
+      doScroll(contactRef.current);
     }
   }
 
   const sectionStyle = `text-gray-700 hover:text-black p-1 mb ${
-    scrolled ? "active:outline text-black  outline-stone-100 hover:cursor-pointer  " : ""
+    scrolled
+      ? "active:outline text-black  outline-stone-100 hover:cursor-pointer  "
+      : ""
   }  rounded-md transition `;
 
   return (
@@ -40,7 +37,6 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
         </p>
 
         <div className=" sm:text-2xl flex gap-2 sm:gap-5 justify-center items-center">
-
           <p
             onClick={(e) => {
               handleScroll("skills");

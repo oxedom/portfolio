@@ -38,7 +38,7 @@ import opencv from "../public/skills/other/opencv.svg";
 import tensorflow from "../public/skills/other/tensorflow.svg";
 import webpack from "../public/skills/other/webpack.svg";
 import Skillbox from "../components/Skillbox";
-import Script from 'next/script'
+import Script from "next/script";
 
 export default function Home() {
   const projectsRef = useRef(null);
@@ -61,7 +61,6 @@ export default function Home() {
 
   return (
     <>
-
       <Head>
         <title>Sam Brink</title>
         <meta name="description" content="Sam Brink's Portfolio" />
@@ -117,7 +116,11 @@ export default function Home() {
               </p>
             </header>
 
-            <div className={`${scrolled ? "" : "animate-mover " } "z-2 flex flex-col p-5 gap-5   transition items-center"   `}>
+            <div
+              className={`${
+                scrolled ? "" : "animate-mover "
+              } "z-2 flex flex-col p-5 gap-5   transition items-center"   `}
+            >
               <Image
                 alt="avatar of self"
                 className=" max-w-[180px]  duration-100"
@@ -130,12 +133,15 @@ export default function Home() {
 
         <section className="flex justify-center">
           <div className=" flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
-            <h2 className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  ">
+            <h2
+              ref={skillsRef}
+              className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  "
+            >
               {" "}
               Skills
             </h2>
 
-            <div ref={skillsRef}  className=" flex flex-col lg:flex-row gap-12    items-center justify-center">
+            <div className=" flex flex-col lg:flex-row gap-12    items-center justify-center">
               {/* <h3 className={skillTitle}> Frontend </h3> */}
               <Skillbox title={"Front-end"}>
                 <Icon src={htmllogo} width={35} name="HTML5" />
@@ -173,24 +179,22 @@ export default function Home() {
           </div>
         </section>
 
-        <div ></div>
-        <section  className="flex justify-center  " >
-          <div   className="flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
-            <h2         className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center">
+        <div></div>
+        <section className="flex justify-center  ">
+          <div className="flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
+            <h2
+              ref={projectsRef}
+              className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center"
+            >
               {" "}
               Projects
             </h2>
 
-            <ProjectBox>
-              <div className=""  ref={projectsRef}></div>
-            </ProjectBox>
+            <ProjectBox></ProjectBox>
           </div>
         </section>
 
-        <section
-          className="my-10 flex flex-col gap-5 items-center  "
-   
-        >
+        <section className="my-10 flex flex-col gap-5 items-center  ">
           <h3 className="text-6xl md:text-7xl text-center  font-bold text-slate-900 ">
             {" "}
             Contact me{" "}

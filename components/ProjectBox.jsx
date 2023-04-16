@@ -6,7 +6,7 @@ import petagram from "../public/images/projects/petagram.png";
 import parkerr from "../public/images/projects/parker.png";
 import guyv from "../public/images/projects/guyv.png";
 
-const ProjectBox = ({children}) => {
+const ProjectBox = ({ children }) => {
   const projects = [
     {
       name: "Parkerr",
@@ -29,7 +29,6 @@ const ProjectBox = ({children}) => {
       repoLink: "https://github.com/oxedom/",
       liveLink: "https://guyvaserman.com/",
     },
-
 
     {
       name: "E-commerce",
@@ -61,7 +60,6 @@ const ProjectBox = ({children}) => {
   return (
     <div className="flex flex-col items-center       justify-center gap-2 p-5   ">
       <div className="grid lg:grid-cols-2 gap-10 md:gap-10   ">
-    
         {projects.map((el, index) => {
           return (
             <Project
@@ -72,11 +70,8 @@ const ProjectBox = ({children}) => {
               imageSrc={el.imageSrc}
               about={el.about}
             ></Project>
-            
           );
-
         })}
-                  {children}
       </div>
     </div>
   );

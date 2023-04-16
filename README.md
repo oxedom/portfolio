@@ -1,6 +1,8 @@
-# Portfolio site 
+# Portfolio site
+
 https://portfolio-bi575nkgb-oxedom.vercel.app/
 
 # Built with
-* NextJS
-* TailwindCSSd
+
+- NextJS
+- TailwindCSSd
