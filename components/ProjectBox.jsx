@@ -47,7 +47,7 @@ const ProjectBox = ({ children }) => {
     {
       name: "Arcade",
       imageSrc: games,
-      about: "Tic Tac Toe, Battleship, Memory Game: Let the games begin! 🎲",
+      about: "Battleship, Memory Game and Tic Tac Toe, : Let the games begin! 🎲",
       repoLink: "https://github.com/oxedom?tab=repositories",
       liveLink: "https://oxedom.github.io/memory-card/",
     },
