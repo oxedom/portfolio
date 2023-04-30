@@ -108,7 +108,7 @@ export default function Home() {
               </h2>
               <h3 className="text-4xl md:text-5xl font-medium ">
                 {" "}
-                Software Developer
+                Fullstack Developer
               </h3>
               <p className="text-xl  sm:text-3xl   ">
                 A creative programmer with a devoted passion for technology and
