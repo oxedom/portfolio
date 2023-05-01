@@ -24,7 +24,7 @@ const ProjectBox = ({ children }) => {
     },
     {
       name: "Fitness Studio",
-      about: "A landing page for a fitness studio. 🔥",
+      about: "A landing page for a fitness studio. 🔥 (WIP)",
       imageSrc: guyv,
       repoLink: "https://github.com/oxedom/",
       liveLink: "https://guyvaserman.com/",
