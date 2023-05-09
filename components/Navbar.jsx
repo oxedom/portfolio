@@ -85,14 +85,14 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
             Contact
           </p>
  
-          <p
+          {/* <p
             onClick={(e) => {
               handleRedirect('blog')
             }}
             className={sectionStyle}
           >
             Blog
-          </p>
+          </p> */}
 
           <a
             target="_blank"
