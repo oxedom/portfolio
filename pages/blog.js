@@ -1,6 +1,9 @@
-import Navbar from "../components/Navbar";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import Head from "next/head";
 const Blog = () => {
+
+
     return (<>
          <Head>
         <title>Sam Brink</title>
@@ -33,12 +36,31 @@ const Blog = () => {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-        <Navbar></Navbar>
-        <main className="bg-gradient-to-t   from-rose-300 to-violet-300  lg:bg-sunset   w-full bg-fixed bg-no-repeat bg-cover  h-screen  flex items-center sm:justify-center ">
-          <section className="mt-5  flex flex-col sm:mx-5   items-center gap-5 md:justify-center md:flex-row">
 
-          </section>
+        
+        <main className="flex  justify-center flex-col bg-pink-400  items-center">
+
+                <nav className="grid grid-cols-3 bg-white w-full  grow border-b-2 border-black items-center    ">
+             
+                        <Link href={'/'}> <span> CODE</span></Link>
+                        <h1 className="text-center text-4xl m-2"> SAM BENJAMIN BRINK </h1>
+                        <a href="https://sambenjaminbrink.myportfolio.com/"> PHOTOGRAPHY</a>
+
+                </nav>
+            
+
+                    <h2 className="text-3xl"> List of Blogs </h2>
+            <ul>
+            <h1 className="text-2xl"> The day my bike was stolen.</h1>
+            <h1 className="text-2xl"> Why I will never go to the cinema again.</h1>
+            <h1 className="text-2xl"> The day I shat in a parking lot</h1>
+            </ul>
+
+
+  
+       
         </main>
+       
     </>)
 
 }
