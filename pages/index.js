@@ -135,7 +135,7 @@ export default function Home() {
           <div className=" flex flex-col gap-10  mt-10 border-b pb-10 w-[1440px]">
             <h2
               ref={skillsRef}
-              className="text-5xl sm:text-7xl text-center  font-bold text-slate-900 items-center  "
+              className="text-5xl sm:text-7xl text-center  font-bold font-lexend text-slate-900 items-center  "
             >
               {" "}
               Skills
