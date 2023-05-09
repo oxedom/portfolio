@@ -53,7 +53,7 @@ const Blog = () => {
             <ul>
             <h1 className="text-2xl"> The day my bike was stolen.</h1>
             <h1 className="text-2xl"> Why I will never go to the cinema again.</h1>
-            <h1 className="text-2xl"> The day I shat in a parking lot</h1>
+            <h1 className="text-2xl"> The day lost my car in a parking lot</h1>
             </ul>
 
 
