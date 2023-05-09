@@ -102,7 +102,7 @@ const Blog = () => {
         <main className="bg-green-500 bg-yellow-200 h-screen">
 
 
-        <svg className={`fill-green-200 h-[350px] duration-300 w-full  ${scrolled ? "" : "opacity-0"} `}
+        <svg className={`fill-green-200 h-[350px] duration-300 w-full `}
    preserveAspectRatio="none"
    viewBox="0 0 1200 120"
    xmlns="http://www.w3.org/2000/svg"
