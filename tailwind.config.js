@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+
+      fontFamily: {
+        lex: "'Lexend Mega', sans-serif",
+
+      },
       backgroundImage: {
         fadebluepurple:
           "linear-gradient(0deg, rgba(164, 54, 253, 0.3), rgba(61, 164, 200, 0.5))",

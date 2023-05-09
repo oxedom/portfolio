@@ -1,6 +1,10 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
+
+
+
+
 const Blog = () => {
 
 
@@ -35,27 +39,33 @@ const Blog = () => {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@500&display=swap" rel="stylesheet"/>
+
+
+
       </Head>
 
         
         <main className="flex  justify-center flex-col bg-pink-400  items-center">
 
-                <nav className="grid grid-cols-3 bg-white w-full  grow border-b-2 border-black items-center    ">
-             
-                        <Link href={'/'}> <span> CODE</span></Link>
-                        <h1 className="text-center text-4xl m-2"> SAM BENJAMIN BRINK </h1>
-                        <a href="https://sambenjaminbrink.myportfolio.com/"> PHOTOGRAPHY</a>
+               
 
+              
+                <nav className="flex justify-center [&>*]font-lex font-lex bg-white w-full xl:h-[150px] grow border-b-2 border-black items-center    ">
+
+                        <ul className="grid grid-cols-3 max-w-[1700px] items-center place-items-center grow">
+
+                  
+                        <Link href={'/'}> <span className="text-3xl"> CODE &lt;/&gt; </span></Link>
+                        <h1 className="text-center text-3xl m-2 "> SAM BENJAMIN BRINK </h1>
+                        <a  className="text-3xl invert bg-white" href="https://sambenjaminbrink.myportfolio.com/"> PHOTOGRAPHY</a>
+                        </ul>
                 </nav>
             
 
-                    <h2 className="text-3xl"> List of Blogs </h2>
-            <ul>
-            <h1 className="text-2xl"> The day my bike was stolen.</h1>
-            <h1 className="text-2xl"> Why I will never go to the cinema again.</h1>
-            <h1 className="text-2xl"> The day lost my car in a parking lot</h1>
-            </ul>
-
+     
 
   
        
