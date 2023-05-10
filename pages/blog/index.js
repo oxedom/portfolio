@@ -129,7 +129,7 @@ xmlns="http://www.w3.org/2000/svg"
                 <section className="grow rounded-b-2xl gap-y-10 flex-col items-center h-screen  bg-yellow-200 flex pt-7" >
                   <h2 className="text-5xl text-gray-900 pt-32 font-lex font-bold hover:cursor-default"> Featured Articles</h2>
                 <div className="grid gap-x-4   grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
-                {blogs.map((b,index) => <BlogCard {...b} />)}
+                {blogs.map((b,index) => <BlogCard key={index} {...b} />)}
           
                           </div>
                 </section>
