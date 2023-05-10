@@ -2,10 +2,10 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import meLogo from '../public/blog/me.png'
+import meLogo from '../../public/blog/me.png'
 import { useState, useEffect } from "react";
-import BlogCard from "../components/BlogCard";
-
+import BlogCard from "../../components/BlogCard";
+import cameraBlog from '../../public/blog/cameraBlog.png'
 
 const Blog = () => {
 
@@ -25,6 +25,15 @@ const Blog = () => {
       
       window.addEventListener("scroll", handleScroll);
     }, []);
+
+    const blogs = 
+    [
+      {title: "How to chose your first film camera", coverImg: cameraBlog, date: 1683712329623, alt: "camera", url: "camera-guide" },
+      {title: "Building Parkerr: From Idea to Execution", coverImg: cameraBlog, date: "",  alt: "camera" ,  url: "camera-guide"},
+      {title: "title", coverImg: cameraBlog, date: "",   alt: "camera",  url: "camera-guide"} ,
+
+
+    ]
   
 
     return (<>
@@ -83,25 +92,43 @@ const Blog = () => {
           </ul>
           </nav>
                   
-        <main className="flex flex-col bg-black  w-full h-screen    ">  
+        <main className="flex flex-col bg-black  w-full    ">  
 
 
 
          
-               <div className="flex pt-16 bg-green-200  border-b-2 border-black pb-10 rounded-2xl   justify-center gap-12 items-center ">
-                <p className="text-6xl text-gray-900  font-bold font-lex uppercase cursor-default">
+               <div className="flex pt-16  bg-green-200   border-black pb-10 rounded-t-2xl h-screen  justify-center gap-12 items-center ">
+                <p className="text-6xl text-gray-900 animate-mover  font-bold font-lex uppercase cursor-default">
                    There is no <br/> 
                    such thing as a  <br/> 
                    FAILED EXPERIMENT <br/> 
                  </p>
-                <Image width={300} src={meLogo}/>
+                <Image className="animate-mover" width={500} src={meLogo}/>
                 </div>
 
-                <section className="grow rounded-2xl  bg-yellow-200 flex justify-center pt-3" >
-                <div className="grid gap-x-4  grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
-          <BlogCard/>
-          <BlogCard/>
-          <BlogCard/>
+
+                <main className="bg-yellow-200 ">
+
+
+
+<svg className={`fill-green-200  duration-300 w-full `}
+preserveAspectRatio="none"
+viewBox="0 0 1200 120"
+xmlns="http://www.w3.org/2000/svg"
+
+>
+<path  d="M60 120L0 0h120L60 120zm120 0L120 0h120l-60 120zm120 0L240 0h120l-60 120zm120 0L360 0h120l-60 120zm120 0L480 0h120l-60 120zm120 0L600 0h120l-60 120zm120 0L720 0h120l-60 120zm120 0L840 0h120l-60 120zm120 0L960 0h120l-60 120zm120 0L1080 0h120l-60 120z"/>
+</svg>
+
+
+
+</main>
+
+
+                <section className="grow rounded-b-2xl gap-y-10 flex-col items-center h-screen  bg-yellow-200 flex pt-7" >
+                  <h2 className="text-5xl text-gray-900 pt-32 font-lex font-bold hover:cursor-default"> Featured Articles</h2>
+                <div className="grid gap-x-4   grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
+                {blogs.map((b,index) => <BlogCard {...b} />)}
           
                           </div>
                 </section>
@@ -115,22 +142,7 @@ const Blog = () => {
 
       
 
-        <main className="bg-yellow-200 ">
 
-
-        <svg className={`fill-green-200  duration-300 w-full `}
-   preserveAspectRatio="none"
-   viewBox="0 0 1200 120"
-   xmlns="http://www.w3.org/2000/svg"
-
-  >
-       <path  d="M60 120L0 0h120L60 120zm120 0L120 0h120l-60 120zm120 0L240 0h120l-60 120zm120 0L360 0h120l-60 120zm120 0L480 0h120l-60 120zm120 0L600 0h120l-60 120zm120 0L720 0h120l-60 120zm120 0L840 0h120l-60 120zm120 0L960 0h120l-60 120zm120 0L1080 0h120l-60 120z"/>
-  </svg>
-
-
-
-
-        </main>
     
 
 
