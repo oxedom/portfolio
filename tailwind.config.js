@@ -12,6 +12,11 @@ module.exports = {
         lex: "'Lexend Mega', sans-serif",
 
       },
+
+      boxShadow: {
+        neo: "0px 0px 0 black, 5px 4px 0 black",
+      },
+
       backgroundImage: {
         fadebluepurple:
           "linear-gradient(0deg, rgba(164, 54, 253, 0.3), rgba(61, 164, 200, 0.5))",

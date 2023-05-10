@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 import meLogo from '../public/blog/me.png'
 import { useState, useEffect } from "react";
+import BlogCard from "../components/BlogCard";
 
 
 const Blog = () => {
@@ -13,7 +14,7 @@ const Blog = () => {
 
 
     const handleScroll = (e) => {
-      if (window.scrollY > 140) {
+      if (window.scrollY > 1) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -62,13 +63,11 @@ const Blog = () => {
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@500&display=swap" rel="stylesheet"/>
       </Head>
       
-      <nav className={`flex justify-center font-bold z-99  fixed  top-0  font-lex bg-white w-full xl:h-[120px] grow border-b-2 border-black items-center  sticky  
+      <nav className={`flex justify-center font-bold    bg-white        transition duration-50     font-lex w-full xl:h-[120px] grow border-y-2 border-black items-center    
       
       
-      ${
-        scrolled ? "opacity-0" : ""
-      }
-          transition duration-500  gap-2 sm:gap-5  p-1
+  
+
       `}>
 
 <ul className="grid grid-cols-3 max-w-[1700px] items-center place-items-center grow">
@@ -84,25 +83,42 @@ const Blog = () => {
           </ul>
           </nav>
                   
-        <main className="flex flex-col bg-green-200  w-full   ">
+        <main className="flex flex-col bg-black  w-full h-screen    ">  
 
-               <div className="flex pt-16  justify-center gap-12 items-center ">
+
+
+         
+               <div className="flex pt-16 bg-green-200  border-b-2 border-black pb-10 rounded-2xl   justify-center gap-12 items-center ">
                 <p className="text-6xl text-gray-900  font-bold font-lex uppercase cursor-default">
                    There is no <br/> 
                    such thing as a  <br/> 
                    FAILED EXPERIMENT <br/> 
                  </p>
-                <Image width={500} src={meLogo}/>
-               </div>
+                <Image width={300} src={meLogo}/>
+                </div>
+
+                <section className="grow rounded-2xl  bg-yellow-200 flex justify-center pt-3" >
+                <div className="grid gap-x-4  grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
+          <BlogCard/>
+          <BlogCard/>
+          <BlogCard/>
+          
+                          </div>
+                </section>
+         
+
+
+         
+               
         </main>
 
 
-   
+      
 
-        <main className="bg-green-500 bg-yellow-200 h-screen">
+        <main className="bg-yellow-200 ">
 
 
-        <svg className={`fill-green-200 h-[350px] duration-300 w-full `}
+        <svg className={`fill-green-200  duration-300 w-full `}
    preserveAspectRatio="none"
    viewBox="0 0 1200 120"
    xmlns="http://www.w3.org/2000/svg"
