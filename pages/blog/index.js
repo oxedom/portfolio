@@ -6,6 +6,7 @@ import meLogo from '../../public/blog/me.png'
 import { useState, useEffect } from "react";
 import BlogCard from "../../components/BlogCard";
 import cameraBlog from '../../public/blog/cameraBlog.png'
+import { getRandomColor } from "../../libs/libs";
 
 const Blog = () => {
 
@@ -28,9 +29,9 @@ const Blog = () => {
 
     const blogs = 
     [
-      {title: "How to chose your first film camera", coverImg: cameraBlog, date: 1683712329623, alt: "camera", url: "camera-guide" },
-      {title: "Building Parkerr: From Idea to Execution", coverImg: cameraBlog, date: "",  alt: "camera" ,  url: "camera-guide"},
-      {title: "title", coverImg: cameraBlog, date: "",   alt: "camera",  url: "camera-guide"} ,
+      {title: "How to chose your first film camera", coverImg: cameraBlog, date: 1683712329623, alt: "camera", url: "camera-guide" , color: getRandomColor()},
+      {title: "Building Parkerr: From Idea to Execution", coverImg: cameraBlog, date: "",  alt: "camera" ,  url: "parkerr-story" , color: getRandomColor()},
+      {title: "Good Albums", coverImg: cameraBlog, date: "",   alt: "camera",  url: "albums-list", color: getRandomColor()} ,
 
 
     ]
