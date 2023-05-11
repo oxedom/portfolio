@@ -1,5 +1,8 @@
 const CameraGuide = () => {
-    return ( <div> a</div>  );
+    return ( <main>
+            <h1> Choosing your first Film Camera </h1>
+        
+         </main>  );
 }
  
 export default CameraGuide;

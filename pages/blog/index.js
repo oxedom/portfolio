@@ -30,7 +30,7 @@ const Blog = () => {
 
     const blogs = 
     [
-      {title: "How to chose your first film camera", coverImg: cameraCover, date: 1683712329623, alt: "camera", url: "camera-guide" , },
+      {title: "How to choose your first film camera", coverImg: cameraCover, date: 1683712329623, alt: "camera", url: "camera-guide" , },
       {title: "Building Parkerr: From Idea to Execution", coverImg: parkerrCover, date: "",  alt: "camera" ,  url: "parkerr-story" , },
       {title: "Good Albums", coverImg: albumCover, date: "",   alt: "camera",  url: "albums-list", } ,
     ]
@@ -99,7 +99,7 @@ const Blog = () => {
 
          </nav> */}
                <div className="flex pt-16  bg-green-200   border-black pb-10 rounded-t-2xl h-screen  justify-center gap-12 items-center ">
-                <p className="text-6xl text-gray-900   font-bold font-lex uppercase cursor-default">
+                <p className="text-6xl  text-gray-900   font-bold font-lex uppercase cursor-default">
                    There is no <br/> 
                    such thing as a  <br/> 
                    FAILED EXPERIMENT <br/> 
@@ -117,7 +117,7 @@ xmlns="http://www.w3.org/2000/svg"
 </main>
                 <section className="grow rounded-b-2xl gap-y-10 flex-col items-center h-screen  bg-yellow-200 flex pt-7" >
                   <h2 className="text-5xl text-gray-900 pt-32 font-lex font-bold hover:cursor-default"> Featured Articles</h2>
-                <div className="grid gap-x-4   grid-cols-3   bg-yellow-200 w-2/3">
+                <div className="grid gap-x-10   grid-cols-3   bg-yellow-200 w-2/3">
                 {blogs.map((b,index) => <>   <BlogCard  key={b.title} {...b} />    </>)}
                           </div>
                 </section>
