@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import BlogCard from "../../components/BlogCard";
 import cameraCover from '../../public/blog/cameraCover.png'
 import parkerrCover from '../../public/blog/parkerrCover.png'
-
+import albumCover from '../../public/blog/albumCover.png'
 
 const Blog = () => {
 
@@ -32,7 +32,7 @@ const Blog = () => {
     [
       {title: "How to chose your first film camera", coverImg: cameraCover, date: 1683712329623, alt: "camera", url: "camera-guide" , },
       {title: "Building Parkerr: From Idea to Execution", coverImg: parkerrCover, date: "",  alt: "camera" ,  url: "parkerr-story" , },
-      {title: "Good Albums", coverImg: cameraCover, date: "",   alt: "camera",  url: "albums-list", } ,
+      {title: "Good Albums", coverImg: albumCover, date: "",   alt: "camera",  url: "albums-list", } ,
     ]
 
     const bannerTextArr = 
@@ -83,85 +83,45 @@ const Blog = () => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@500&display=swap" rel="stylesheet"/>
       </Head>
-      
-      <nav className={`flex justify-center font-bold    bg-white        transition duration-50     font-lex w-full xl:h-[120px] grow border-y-2 border-black items-center    
-      
-      
-  
-
-      `}>
-
+      <nav className={`flex justify-center font-bold    bg-white        transition duration-50     font-lex w-full xl:h-[120px] grow border-t-2  border-black items-center `}>
 <ul className="grid grid-cols-3 max-w-[1700px] items-center place-items-center grow">
-
-
           <Link href={'/'}> <span className="text-3xl hover:invert bg-white"> CODE &lt;/&gt; </span></Link>
           <div className="flex flex-col items-center cursor-default">
           <h1 className="text-center text-3xl m-2  "> SAM BENJAMIN BRINK </h1>
           <p className="text-xs"> blog</p>
           </div>
-
           <a target="_blank" className="text-3xl hover:invert bg-black text-white " href="https://sambenjaminbrink.myportfolio.com/"> PHOTOGRAPHY</a>
           </ul>
           </nav>
-                  
-        <main className="flex flex-col bg-black  w-full    ">  
-
+        <main className="flex flex-col bg-black  w-full px-1.5 py-1 rounded-t-2xl ">  
         {/* <nav className="bg-black  text-white font-lex  h-16 flex flex-wrap gap-2   overflow-clip  "> 
             {bannerTextArr.map((b =>  <>   <p className="uppercase h-full   "> {b} </p>  </>)) }
 
          </nav> */}
-
-         
                <div className="flex pt-16  bg-green-200   border-black pb-10 rounded-t-2xl h-screen  justify-center gap-12 items-center ">
-                <p className="text-6xl text-gray-900 animate-mover  font-bold font-lex uppercase cursor-default">
+                <p className="text-6xl text-gray-900   font-bold font-lex uppercase cursor-default">
                    There is no <br/> 
                    such thing as a  <br/> 
                    FAILED EXPERIMENT <br/> 
                  </p>
-                <Image className="animate-mover" width={500} src={meLogo}/>
+                <Image className="" width={500} src={meLogo}/>
                 </div>
-
-
                 <main className="bg-yellow-200 ">
-
-
-
 <svg className={`fill-green-200  duration-300 w-full `}
 preserveAspectRatio="none"
 viewBox="0 0 1200 120"
 xmlns="http://www.w3.org/2000/svg"
-
 >
 <path  d="M60 120L0 0h120L60 120zm120 0L120 0h120l-60 120zm120 0L240 0h120l-60 120zm120 0L360 0h120l-60 120zm120 0L480 0h120l-60 120zm120 0L600 0h120l-60 120zm120 0L720 0h120l-60 120zm120 0L840 0h120l-60 120zm120 0L960 0h120l-60 120zm120 0L1080 0h120l-60 120z"/>
 </svg>
-
-
-
 </main>
-
-
                 <section className="grow rounded-b-2xl gap-y-10 flex-col items-center h-screen  bg-yellow-200 flex pt-7" >
                   <h2 className="text-5xl text-gray-900 pt-32 font-lex font-bold hover:cursor-default"> Featured Articles</h2>
-                <div className="grid gap-x-4   grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
-                {blogs.map((b,index) => <BlogCard  key={b.title} {...b} />)}
-          
+                <div className="grid gap-x-4   grid-cols-3   bg-yellow-200 w-2/3">
+                {blogs.map((b,index) => <>   <BlogCard  key={b.title} {...b} />    </>)}
                           </div>
                 </section>
-         
-
-
-         
-               
-        </main>
-
-
-      
-
-
-    
-
-
-       
+        </main>       
     </>)
 
 }
