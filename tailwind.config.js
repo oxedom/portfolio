@@ -8,6 +8,14 @@ module.exports = {
   theme: {
     extend: {
 
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
+
+
       fontFamily: {
         lex: "'Lexend Mega', sans-serif",
 
@@ -39,6 +47,7 @@ module.exports = {
     },
 
     animation: {
+      scroll: 'scroll 20s linear infinite',
       fade: "fadeOut 1s ease-in-out",
       mover: "floater 2s infinite alternate",
     },

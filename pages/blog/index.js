@@ -1,14 +1,15 @@
-
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
-import meLogo from '../../public/blog/me.png'
+import meLogo from '../../public/blog/me2.png'
 import { useState, useEffect } from "react";
 import BlogCard from "../../components/BlogCard";
-import cameraBlog from '../../public/blog/cameraBlog.png'
-import { getRandomColor } from "../../libs/libs";
+import cameraCover from '../../public/blog/cameraCover.png'
+import parkerrCover from '../../public/blog/parkerrCover.png'
+
 
 const Blog = () => {
+
 
 
     const [scrolled, setScrolled] = useState(false)
@@ -29,11 +30,21 @@ const Blog = () => {
 
     const blogs = 
     [
-      {title: "How to chose your first film camera", coverImg: cameraBlog, date: 1683712329623, alt: "camera", url: "camera-guide" , color: getRandomColor()},
-      {title: "Building Parkerr: From Idea to Execution", coverImg: cameraBlog, date: "",  alt: "camera" ,  url: "parkerr-story" , color: getRandomColor()},
-      {title: "Good Albums", coverImg: cameraBlog, date: "",   alt: "camera",  url: "albums-list", color: getRandomColor()} ,
+      {title: "How to chose your first film camera", coverImg: cameraCover, date: 1683712329623, alt: "camera", url: "camera-guide" , },
+      {title: "Building Parkerr: From Idea to Execution", coverImg: parkerrCover, date: "",  alt: "camera" ,  url: "parkerr-story" , },
+      {title: "Good Albums", coverImg: cameraCover, date: "",   alt: "camera",  url: "albums-list", } ,
+    ]
 
-
+    const bannerTextArr = 
+    [
+     "If you do things right, people won't be sure you've done anything at all",
+    "You miss 100% of the shots you don't take",
+      "If you tell the truth, you don't have to remember anything",
+      "Peace cannot be kept by force; it can only be achieved by understanding",
+      "Some people would rather eat well, and some would rather sleep well",
+     "One day your parents picked you up, sat you down, and never picked you up again",
+     "Get your facts first, then you can distort them as you please",
+     "A lie can travel halfway around the world while the truth is putting on its shoes"
     ]
   
 
@@ -95,7 +106,10 @@ const Blog = () => {
                   
         <main className="flex flex-col bg-black  w-full    ">  
 
+        {/* <nav className="bg-black  text-white font-lex  h-16 flex flex-wrap gap-2   overflow-clip  "> 
+            {bannerTextArr.map((b =>  <>   <p className="uppercase h-full   "> {b} </p>  </>)) }
 
+         </nav> */}
 
          
                <div className="flex pt-16  bg-green-200   border-black pb-10 rounded-t-2xl h-screen  justify-center gap-12 items-center ">
@@ -129,7 +143,7 @@ xmlns="http://www.w3.org/2000/svg"
                 <section className="grow rounded-b-2xl gap-y-10 flex-col items-center h-screen  bg-yellow-200 flex pt-7" >
                   <h2 className="text-5xl text-gray-900 pt-32 font-lex font-bold hover:cursor-default"> Featured Articles</h2>
                 <div className="grid gap-x-4   grid-cols-3 w-2/3 h-2/3  bg-yellow-200">
-                {blogs.map((b,index) => <BlogCard key={index} {...b} />)}
+                {blogs.map((b,index) => <BlogCard  key={b.title} {...b} />)}
           
                           </div>
                 </section>
