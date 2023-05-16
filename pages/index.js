@@ -111,7 +111,7 @@ export default function Home() {
                 {" "}
                 Fullstack Developer
               </h3>
-              <p className="text-xl  sm:text-3xl   ">
+              <p className="text-xl md:mt-2 sm:text-3xl   ">
                 A creative programmer with a devoted passion for technology and
                 learning.
               </p>

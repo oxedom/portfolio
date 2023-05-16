@@ -1,11 +1,8 @@
 import { useRouter } from "next/router";
 
-
-
 const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
-
-  let router = useRouter()
-  const onHomePage = (router.pathname === '/')
+  let router = useRouter();
+  const onHomePage = router.pathname === "/";
   console.log(onHomePage);
   function doScroll(element) {
     element.scrollIntoView({
@@ -15,15 +12,12 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
     });
   }
 
-  function handleRedirect(value) 
-  {
-    if(value === 'home') 
-    {
-      router.push('/')
+  function handleRedirect(value) {
+    if (value === "home") {
+      router.push("/");
     }
-    if(value === 'blog') 
-    {
-      router.push('blog')
+    if (value === "blog") {
+      router.push("blog");
     }
   }
 
@@ -36,8 +30,6 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
       doScroll(contactRef.current);
     }
   }
-
-
 
   const sectionStyle = `text-gray-700 hover:text-black p-1 mb ${
     scrolled
@@ -53,13 +45,16 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
           transition duration-300  gap-2 sm:gap-5  p-1`}
     >
       <div className="flex flex-col md:flex-row md:gap-5 items-center md:justify-start md:ml-5 justify-center ">
-        <p onClick={() => { handleRedirect('home')}} className="text-2xl text-center text-gray-800 sm:text-left sm:text-3xl font-bold hover:cursor-default">
+        <p
+          onClick={() => {
+            handleRedirect("home");
+          }}
+          className="text-2xl text-center text-gray-800 sm:text-left sm:text-3xl font-bold hover:cursor-default"
+        >
           {" "}
           Sam Brink
         </p>
-  <div  className=" sm:text-2xl flex gap-2 sm:gap-5 justify-center items-center">
-          
-          
+        <div className=" sm:text-2xl flex gap-2 sm:gap-5 justify-center items-center">
           <p
             onClick={(e) => {
               handleScroll("skills");
@@ -84,7 +79,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
           >
             Contact
           </p>
- 
+
           {/* <p
             onClick={(e) => {
               handleRedirect('blog')
@@ -102,10 +97,7 @@ const Navbar = ({ projectsRef, contactRef, skillsRef, scrolled }) => {
             {" "}
             Github
           </a>
-
-
-        </div> 
-  
+        </div>
       </div>
     </nav>
   );
